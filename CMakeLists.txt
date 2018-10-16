@@ -37,12 +37,12 @@ add_library(Disc_Engine
  src/Disc_Engine/Core.h
  src/Disc_Engine/Entity.h
  src/Disc_Engine/Component.h
- src/Disc_Engine/Screen.h
+ src/Disc_Engine/Window.h
 
  src/Disc_Engine/Core.cpp
  src/Disc_Engine/Entity.cpp
  src/Disc_Engine/Component.cpp
- src/Disc_Engine/Screen.cpp
+ src/Disc_Engine/Window.cpp
 )
 
 if(MSVC)

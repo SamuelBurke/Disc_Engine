@@ -1,6 +1,8 @@
 #ifndef DISC_ENGINE_CORE_H
 #define DISC_ENGINE_CORE_H
 
+#include "Window.h"
+
 #include <memory>     
 #include <vector>     
 
@@ -24,13 +26,15 @@ public:
 	void End();
 
 	//! Function used to add an entity to the vector of entities. @ see line 32
-	std::shared_ptr<Entity> AddEntity();
+	std::shared_ptr<Entity> AddEnt();
 	
 private:
 	bool m_quit; //Boolean variable - Which is set to false when the engine is running.
 
 	std::vector<std::shared_ptr<Entity>> m_entities; //Stores all the entities within the core.
 	std::weak_ptr<Core> m_self; //Stores a pointer of the core itself.
+
+	Window m_window;
 };
 }
 
