@@ -3,6 +3,8 @@
 #include <GL/glew.h>
 #include <exception>
 
+using namespace Disc_Engine;
+
 void Window::InitWin()
 {
 	m_wid = 800;

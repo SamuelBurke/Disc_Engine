@@ -39,10 +39,24 @@ add_library(Disc_Engine
  src/Disc_Engine/Component.h
  src/Disc_Engine/Window.h
 
+ src/Disc_Engine/MeshRenderer.h
+ 
+ src/Disc_Engine/Resources.h
+ src/Disc_Engine/Resource.h
+ src/Disc_Engine/Mesh.h
+ src/Disc_Engine/Texture.h
+ src/Disc_Engine/Shader.h
+
  src/Disc_Engine/Core.cpp
  src/Disc_Engine/Entity.cpp
  src/Disc_Engine/Component.cpp
  src/Disc_Engine/Window.cpp
+
+ src/Disc_Engine/MeshRenderer.cpp
+
+ src/Disc_Engine/Mesh.cpp
+ src/Disc_Engine/Texture.cpp
+ src/Disc_Engine/Shader.cpp
 )
 
 if(MSVC)

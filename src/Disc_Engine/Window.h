@@ -1,7 +1,10 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#ifndef DISC_ENGINE_WINDOW_H
+#define DISC_ENGINE_WINDOW_H
 
 #include <SDL2/SDL.h>
+
+namespace Disc_Engine
+{
 
 class Window
 {
@@ -20,4 +23,5 @@ private:
 
 };
 
-#endif // !WINDOW_H
+}
+#endif // !DISC_ENGINE_WINDOW_H
