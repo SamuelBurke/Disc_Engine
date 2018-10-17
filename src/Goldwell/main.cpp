@@ -14,12 +14,18 @@
 //class Example : public Disc_Engine::Component
 //{
 //public:
-//	blah blah 
+//	blah blah
 //};
 
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
+
+	std::shared_ptr<Disc_Engine::Entity> ent = core->AddEnt();
+
+	std::shared_ptr<Disc_Engine::MeshRenderer> mr = ent->AddComponent<Disc_Engine::MeshRenderer>();
+
+	//	TO DO : CALL THE RENDERER 
 
 	core->Begin(); //begin the core of the engine.
 

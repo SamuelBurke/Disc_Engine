@@ -10,9 +10,13 @@ class Mesh : public Resource
 {
 public:
 	~Mesh();
+
+
 private:
 	static std::shared_ptr<Mesh> Generate();
 	static std::shared_ptr<Mesh> Load(std::string _filePath);
+
+
 };
 
 }

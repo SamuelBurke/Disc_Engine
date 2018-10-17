@@ -9,11 +9,14 @@ class Entity;
 
 class Component
 {
+	friend class Entity;
+
 public:
 	virtual ~Component();
 
 private:
 	std::weak_ptr<Entity> m_entity;
+	bool m_begin;
 
 	virtual void OnInit();
 	virtual void OnBegin();
