@@ -8,8 +8,8 @@ include_directories(
 
 if (MSVC)
   include_directories(
-    contrib/msvc-windows-x86/glew/include
     contrib/msvc-windows-x86/SDL2/include
+    contrib/msvc-windows-x86/glew/include
     contrib/msvc-windows-x86/openal-soft/include
     contrib/msvc-windows-x86/ogg/include
     contrib/msvc-windows-x86/vorbis/include
