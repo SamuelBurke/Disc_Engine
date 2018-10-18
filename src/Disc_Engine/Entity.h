@@ -48,6 +48,8 @@ public:
 		return rtn;	
 	}
 
+	std::shared_ptr<Core> GetCore();
+
 private:
 	//! Function to be called every frame. Updates every entity.
 	void Tick(); 

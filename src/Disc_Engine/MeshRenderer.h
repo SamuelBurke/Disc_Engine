@@ -15,11 +15,8 @@ class MeshRenderer : public Component
 public:
 	void Init();
 
-	void SetUp();
-	void Draw();
-
-private:
 	void Display();
+private:
 
 	GLuint m_positionsVboId, m_vaoId;
 	GLuint m_programId;

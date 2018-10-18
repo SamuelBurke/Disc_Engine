@@ -1,4 +1,5 @@
 #include "Component.h"
+#include "MeshRenderer.h"
 
 using namespace Disc_Engine;
 
@@ -23,5 +24,5 @@ void Component::OnTick()
 
 void Component::OnDisplay()
 {
-
+	
 }

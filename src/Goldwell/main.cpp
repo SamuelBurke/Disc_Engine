@@ -22,8 +22,9 @@ int main()
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
 
 	std::shared_ptr<Disc_Engine::Entity> ent = core->AddEnt();
-
-	std::shared_ptr<Disc_Engine::MeshRenderer> mr = ent->AddComponent<Disc_Engine::MeshRenderer>();
+	std::shared_ptr<Disc_Engine::MeshRenderer> tri = ent->AddComponent<Disc_Engine::MeshRenderer>();
+	std::shared_ptr<Disc_Engine::MeshRenderer> tri2 = ent->GetComponent<Disc_Engine::MeshRenderer>();
+	//tri->Display();
 
 	//	TO DO : CALL THE RENDERER 
 

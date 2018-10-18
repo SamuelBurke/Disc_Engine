@@ -1,5 +1,6 @@
 #include "Core.h" //include original class
 #include "Entity.h" //allows access to the entities' tick to be called in Begin
+#include "MeshRenderer.h"
 
 #include <iostream>
 
@@ -18,6 +19,9 @@ std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 
 void Core::Begin() //called at the end of main() - Here is where the main loop will be.
 {
+	//std::shared_ptr<Entity> ent = AddEnt();
+	//std::shared_ptr<MeshRenderer> tri = ent->AddComponent<MeshRenderer>();
+
 	while (!m_quit)
 	{
 		SDL_Event e = { 0 };
@@ -40,6 +44,9 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 		for (std::vector<std::shared_ptr<Entity> >::iterator it = m_entities.begin(); it != m_entities.end(); it++)
 		{
 			(*it)->Display();
+
+			//tri->Display();
+			
 		}
 
 		m_window.SwapWin();

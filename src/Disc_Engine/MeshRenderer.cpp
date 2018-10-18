@@ -4,14 +4,6 @@ using namespace Disc_Engine;
 
 void MeshRenderer::Init()
 {
-}
-
-void MeshRenderer::Display()
-{
-}
-
-void MeshRenderer::SetUp()
-{
 	const GLfloat positions[] =
 	{
 		0.0f,  0.5f, 0.0f,
@@ -57,11 +49,12 @@ void MeshRenderer::SetUp()
 	//reset the state
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
+
+	m_shader = std::make_shared<Shader>("../resources/shaders/simple.vert", "../resources/shaders/simple.frag");
 }
 
-void MeshRenderer::Draw()
+void MeshRenderer::Display()
 {
-	m_shader = std::make_shared<Shader>("resources/simple.vert", "resources/simple.frag");
 	m_shader->Use();
 	glBindVertexArray(m_vaoId);
 
