@@ -37,7 +37,8 @@ add_library(Disc_Engine
  src/Disc_Engine/Core.h
  src/Disc_Engine/Entity.h
  src/Disc_Engine/Component.h
- src/Disc_Engine/Window.h
+ src/Disc_Engine/Window.h 
+ src/Disc_Engine/Exception.h
 
  src/Disc_Engine/MeshRenderer.h
  
@@ -51,6 +52,7 @@ add_library(Disc_Engine
  src/Disc_Engine/Entity.cpp
  src/Disc_Engine/Component.cpp
  src/Disc_Engine/Window.cpp
+ src/Disc_Engine/Exception.cpp
 
  src/Disc_Engine/MeshRenderer.cpp
 
