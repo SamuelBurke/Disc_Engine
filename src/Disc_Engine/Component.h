@@ -6,6 +6,7 @@
 namespace Disc_Engine
 {
 class Entity;
+class Core;
 
 class Component
 {
@@ -14,9 +15,13 @@ class Component
 public:
 	virtual ~Component();
 
+	std::shared_ptr<Core> GetCore();
+	std::shared_ptr<Entity> GetEntity();
+
+
 private:
 	std::weak_ptr<Entity> m_entity;
-	bool m_begin;
+	bool m_began;
 
 	virtual void OnInit();
 	virtual void OnBegin();

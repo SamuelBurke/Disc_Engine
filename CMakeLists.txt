@@ -37,6 +37,9 @@ add_library(Disc_Engine
  src/Disc_Engine/Core.h
  src/Disc_Engine/Entity.h
  src/Disc_Engine/Component.h
+ src/Disc_Engine/VertBuffer.h
+ src/Disc_Engine/VertArray.h
+
  src/Disc_Engine/Window.h 
  src/Disc_Engine/Exception.h
 
@@ -51,6 +54,9 @@ add_library(Disc_Engine
  src/Disc_Engine/Core.cpp
  src/Disc_Engine/Entity.cpp
  src/Disc_Engine/Component.cpp
+ src/Disc_Engine/VertBuffer.cpp
+ src/Disc_Engine/VertArray.cpp
+
  src/Disc_Engine/Window.cpp
  src/Disc_Engine/Exception.cpp
 

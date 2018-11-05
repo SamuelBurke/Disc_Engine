@@ -6,6 +6,12 @@ void Entity::Tick()
 {
 	for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
 	{
+		if (!(*it)->m_began)
+		{
+			(*it)->OnBegin();
+			(*it)->m_began = true;
+		}
+
 		(*it)->OnTick();
 	}
 }

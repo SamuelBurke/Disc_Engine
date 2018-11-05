@@ -44,8 +44,6 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 		for (std::vector<std::shared_ptr<Entity> >::iterator it = m_entities.begin(); it != m_entities.end(); it++)
 		{
 			(*it)->Display();
-
-			//tri->Display();
 			
 		}
 

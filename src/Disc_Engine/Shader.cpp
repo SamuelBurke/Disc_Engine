@@ -1,6 +1,8 @@
 #include "Shader.h"
+#include "VertArray.h"
 
-#include <gl/glew.h>
+#include <glm/ext.hpp>
+
 #include <iostream>
 
 using namespace Disc_Engine;
@@ -54,6 +56,9 @@ Shader::Shader(const char* _vertPath, const char* _fragPath)
 	m_id = glCreateProgram();
 	glAttachShader(m_id, m_vert);
 	glAttachShader(m_id, m_frag);
+	glBindAttribLocation(m_id, 0, "in_Position");
+	glBindAttribLocation(m_id, 1, "in_Color");
+
 	glLinkProgram(m_id);
 	CheckCompilerErrors(m_id, "PROGRAM");
 
@@ -62,9 +67,21 @@ Shader::Shader(const char* _vertPath, const char* _fragPath)
 	glDeleteShader(m_frag);
 }
 
-void Shader::Use()
+//void Shader::Use()
+//{
+//	glUseProgram(m_id);
+//}
+
+void Shader::Draw(VertArray &_vertArray)
 {
 	glUseProgram(m_id);
+	glBindVertexArray(_vertArray.GetID());
+
+	glDrawArrays(GL_TRIANGLES, 0, _vertArray.GetVertexCount());
+	
+
+	glBindVertexArray(0);
+	glUseProgram(0);
 }
 
 void Shader::CheckCompilerErrors(unsigned int _shader, std::string _type)
@@ -88,5 +105,55 @@ void Shader::CheckCompilerErrors(unsigned int _shader, std::string _type)
 			glGetProgramInfoLog(_shader, 1024, NULL, infoLog);
 			std::cout << "ERROR: PROGRAM LINKING ERROR of type: " << _type << std::endl << infoLog << "\n-- --------- --" << std::endl;
 		}
+		
+
 	}
+	std::cout << "Program & Shader loaded successfully." << std::endl;
+}
+
+void Shader::SetUniform(std::string _uniform, glm::vec4 _value)
+{
+	GLint uniformID = glGetUniformLocation(m_id, _uniform.c_str());
+
+	if (uniformID == -1)
+	{
+		throw std::exception();
+	}
+
+	glUseProgram(m_id);
+	glUniform4f(uniformID, _value.x, _value.y, _value.z, _value.w);
+	glUseProgram(0);
+}
+
+void Shader::SetUniform(std::string _uniform, float _value)
+{
+	GLint uniformID = glGetUniformLocation(m_id, _uniform.c_str());
+
+	if (uniformID == -1)
+	{
+		throw std::exception();
+	}
+
+	glUseProgram(m_id);
+	glUniform1f(uniformID, _value);
+	glUseProgram(0);
+}
+
+void Shader::SetUniform(std::string _uniform, glm::mat4 _value)
+{
+	GLint uniformID = glGetUniformLocation(m_id, _uniform.c_str());
+
+	if (uniformID == -1)
+	{
+		throw std::exception();
+	}
+
+	glUseProgram(m_id);
+	glUniformMatrix4fv(uniformID, 1, GL_FALSE, glm::value_ptr(_value));
+	glUseProgram(0);
+}
+
+GLuint Shader::GetID()
+{
+	return m_id;
 }

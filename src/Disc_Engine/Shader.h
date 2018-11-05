@@ -8,16 +8,29 @@
 #include <sstream>
 #include <memory>
 
+#include <GL/glew.h>
+#include <glm/glm.hpp>
+
 namespace Disc_Engine
 {
+class VertArray;
+
 class Shader : public Resource
 {
 public:
 	Shader(const char* _vertPath, const char* _fragPath);
+	//void Use();
+	void Draw(VertArray &_vertArray);
+	void SetUniform(std::string _uniform, glm::vec4 _value);
+	void SetUniform(std::string _uniform, float _value);
+	void SetUniform(std::string _uniform, glm::mat4 _value);
 
-	unsigned int m_id;
+	GLuint GetID();
 
-	void Use();
+private:
+	void CheckCompilerErrors(unsigned int _shader, std::string _type);
+
+	GLuint m_id;
 
 	std::string m_vertCode;
 	std::string m_fragCode;
@@ -34,10 +47,6 @@ public:
 	//const std::shared_ptr<char> m_fShaderCode;
 
 	unsigned int m_vert, m_frag;
-
-private:
-	void CheckCompilerErrors(unsigned int _shader, std::string _type);
-
 };
 
 }

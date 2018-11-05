@@ -6,6 +6,12 @@
 #include <memory> 
 #include <vector>
 
+#define ADDCOMPONENT \
+	std::shared_ptr<T> rtn = std::make_shared<T>(); \
+	rtn->m_entity = m_self; \
+	rtn->m_began = false;   \
+	m_components.push_back(rtn);
+
 namespace Disc_Engine 
 {
 
@@ -38,14 +44,28 @@ public:
 	template <typename T>
 	std::shared_ptr<T> AddComponent()
 	{
-		std::shared_ptr<T> rtn = std::make_shared<T>();
-		rtn->m_entity = m_self;
-		rtn->m_begin = false;
-		m_components.push_back(rtn);
-
+		ADDCOMPONENT
 		rtn->OnInit();
 
 		return rtn;	
+	}
+
+	template <typename T, typename A>
+	std::shared_ptr<T> AddComponent(A _a)
+	{
+		ADDCOMPONENT
+		rtn->OnInit(_a);
+
+		return rtn;
+	}
+
+	template <typename T, typename A, typename B>
+	std::shared_ptr<T> AddComponent(A _a, B _b)
+	{
+		ADDCOMPONENT
+		rtn->OnInit(_a, _b);
+
+		return rtn;
 	}
 
 	std::shared_ptr<Core> GetCore();
@@ -54,10 +74,9 @@ private:
 	//! Function to be called every frame. Updates every entity.
 	void Tick(); 
 
-	//! Function to be caled after everything has been updated as is ready to display
+	//! Function to be called after everything has been updated as is ready to display
 	void Display();
 	
-
 	std::vector<std::shared_ptr<Component>> m_components;
 	std::weak_ptr<Entity> m_self; // Stores a pointer to the current entity, set in Core.cpp @ line 36.
 	std::weak_ptr<Core>   m_core; // stores a pointer to the core, set in the Core.cpp @ line 37.

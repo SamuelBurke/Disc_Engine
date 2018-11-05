@@ -2,25 +2,27 @@
 #define DISC_ENGINE_MESHRENDERER_H
 
 #include "Component.h"
-#include "Shader.h"
-//#include "Mesh.h"
 
 #include <memory>
-#include <GL/glew.h>
 
 namespace Disc_Engine
 {
+class Shader;
+class VertArray;
+
 class MeshRenderer : public Component
 {
 public:
-	void Init();
+	void OnInit();
+	//void OnTick() override;
 
-	void Display();
 private:
+	void OnDisplay();
 
-	GLuint m_positionsVboId, m_vaoId;
-	GLuint m_programId;
+	//GLuint m_positionsVboId, m_vaoId;
+	//GLuint m_programId;
 
+	std::shared_ptr<VertArray> m_shape;
 	std::shared_ptr<Shader> m_shader;
 
 };

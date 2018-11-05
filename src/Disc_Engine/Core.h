@@ -9,7 +9,7 @@
 namespace Disc_Engine // Encapsulates the class within the engine namespace. For the sake of efficient programming.
 {
 class Entity;	 /* Forward declaration of Entity allows usage of <Entity>
-				  @ see line 26 */
+				  @ see line 29 */
 				
 
 /*! Creates the Core class of the engine. The core contains all entities used within the game engine. */
