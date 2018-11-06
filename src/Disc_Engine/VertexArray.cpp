@@ -1,9 +1,9 @@
-#include "VertArray.h"
-#include "VertBuffer.h"
+#include "VertexArray.h"
+#include "VertexBuffer.h"
 
 using namespace Disc_Engine;
 
-VertArray::VertArray() : m_dirty(false)
+VertexArray::VertexArray() : m_dirty(false)
 {
 	glGenVertexArrays(1, &m_id);
 
@@ -15,7 +15,7 @@ VertArray::VertArray() : m_dirty(false)
 	m_buffers.resize(10);
 }
 
-void VertArray::SetBuffer(std::string _attribute, std::weak_ptr<VertBuffer> _buffer)
+void VertexArray::SetBuffer(std::string _attribute, std::weak_ptr<VertexBuffer> _buffer)
 {
 	if (_attribute == "in_Position")
 	{
@@ -35,7 +35,7 @@ void VertArray::SetBuffer(std::string _attribute, std::weak_ptr<VertBuffer> _buf
 	m_dirty = true;
 }
 
-int VertArray::GetVertexCount()
+int VertexArray::GetVertexCount()
 {
 	if (!m_buffers.at(0))
 	{
@@ -45,7 +45,7 @@ int VertArray::GetVertexCount()
 	return m_buffers.at(0)->GetDataSize() / m_buffers.at(0)->GetComponents();
 }
 
-GLuint VertArray::GetID()
+GLuint VertexArray::GetID()
 {
 	if (!m_dirty)
 	{

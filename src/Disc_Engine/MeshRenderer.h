@@ -8,7 +8,7 @@
 namespace Disc_Engine
 {
 class Shader;
-class VertArray;
+class VertexArray;
 
 class MeshRenderer : public Component
 {
@@ -22,7 +22,7 @@ private:
 	//GLuint m_positionsVboId, m_vaoId;
 	//GLuint m_programId;
 
-	std::shared_ptr<VertArray> m_shape;
+	std::shared_ptr<VertexArray> m_shape;
 	std::shared_ptr<Shader> m_shader;
 
 };

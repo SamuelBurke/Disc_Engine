@@ -9,7 +9,7 @@ using namespace Disc_Engine;
 std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 {
 	std::shared_ptr<Core> rtn = std::make_shared<Core>(); //want to return a shared pointer of core
-	rtn->m_quit = false;                                  //to the main, to then call entity through
+	rtn->m_quit = true;                                  //to the main, to then call entity through
 	rtn->m_self = rtn;                                    //core, and component through entity.
 
 	rtn->m_window.InitWin();                              //call the initialisation of the SDL window.
@@ -21,6 +21,8 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 {
 	//std::shared_ptr<Entity> ent = AddEnt();
 	//std::shared_ptr<MeshRenderer> tri = ent->AddComponent<MeshRenderer>();
+
+	m_quit = false;
 
 	while (!m_quit)
 	{

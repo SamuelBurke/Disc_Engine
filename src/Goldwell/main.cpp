@@ -9,7 +9,7 @@
 
 #include <Disc_Engine/Disc_Engine.h> //allows the use of Engine elements in our game main. Core, Entity etc.
 
-#include <memory> //std::shared_ptr, std::weak_ptr.
+#include <iostream>
 
 //class Example : public Disc_Engine::Component
 //{
@@ -17,11 +17,33 @@
 //	blah blah
 //};
 
+class TestScreen : public Disc_Engine::Component
+{
+public:
+	void OnInit(std::string _colour)
+	{
+	}
+
+	void OnBegin()
+	{
+	}
+
+	void OnTick()
+	{
+	}
+
+	void OnDisplay()
+	{
+	}
+};
+
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
 
 	std::shared_ptr<Disc_Engine::Entity> ent = core->AddEnt();
+
+	//std::shared_ptr<TestScreen> test = ent->AddComponent<TestScreen>("Green");
 	std::shared_ptr<Disc_Engine::MeshRenderer> mr = ent->AddComponent<Disc_Engine::MeshRenderer>();
 	//std::shared_ptr<Disc_Engine::MeshRenderer> mr2 = ent->GetComponent<Disc_Engine::MeshRenderer>();
 

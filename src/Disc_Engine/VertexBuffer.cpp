@@ -1,8 +1,8 @@
-#include "VertBuffer.h"
+#include "VertexBuffer.h"
 
 using namespace Disc_Engine;
 
-VertBuffer::VertBuffer() : m_components(0), m_dirty(false)
+VertexBuffer::VertexBuffer() : m_components(0), m_dirty(false)
 {
 	glGenBuffers(1, &m_id);
 
@@ -12,7 +12,7 @@ VertBuffer::VertBuffer() : m_components(0), m_dirty(false)
 	}
 }
 
-void VertBuffer::Add(glm::vec3 _value)
+void VertexBuffer::Add(glm::vec3 _value)
 {
 	if (!m_components)
 	{
@@ -30,7 +30,7 @@ void VertBuffer::Add(glm::vec3 _value)
 	m_dirty = true;
 }
 
-void VertBuffer::Add(glm::vec4 _value)
+void VertexBuffer::Add(glm::vec4 _value)
 {
 	if (!m_components)
 	{
@@ -49,12 +49,12 @@ void VertBuffer::Add(glm::vec4 _value)
 	m_dirty = true;
 }
 
-int VertBuffer::GetDataSize()
+int VertexBuffer::GetDataSize()
 {
 	return m_data.size();
 }
 
-int VertBuffer::GetComponents()
+int VertexBuffer::GetComponents()
 {
 	if (!m_components)
 	{
@@ -64,7 +64,7 @@ int VertBuffer::GetComponents()
 	return m_components;
 }
 
-GLuint VertBuffer::GetID()
+GLuint VertexBuffer::GetID()
 {
 	if (m_dirty)
 	{

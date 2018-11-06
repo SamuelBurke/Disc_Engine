@@ -1,5 +1,5 @@
-#ifndef DISC_ENGINE_VERTBUFFER_H
-#define DISC_ENGINE_VERTBUFFER_H
+#ifndef DISC_ENGINE_VERTEXBUFFER_H
+#define DISC_ENGINE_VERTEXBUFFER_H
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>
@@ -8,10 +8,10 @@
 
 namespace Disc_Engine
 {
-class VertBuffer
+class VertexBuffer
 {
 public:
-	VertBuffer();
+	VertexBuffer();
 	void Add(glm::vec3 _value);
 	void Add(glm::vec4 _value);
 
@@ -29,4 +29,4 @@ private:
 };
 }
 
-#endif // !DISC_ENGINE_VERTBUFFER_H
+#endif // !DISC_ENGINE_VERTEXBUFFER_H
