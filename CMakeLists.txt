@@ -40,6 +40,7 @@ add_library(Disc_Engine
  src/Disc_Engine/VertexBuffer.h
  src/Disc_Engine/VertexArray.h
 
+ src/Disc_Engine/Audio.h
  src/Disc_Engine/Window.h 
  src/Disc_Engine/Exception.h
 
@@ -51,12 +52,14 @@ add_library(Disc_Engine
  src/Disc_Engine/Texture.h
  src/Disc_Engine/Shader.h
 
+
  src/Disc_Engine/Core.cpp
  src/Disc_Engine/Entity.cpp
  src/Disc_Engine/Component.cpp
  src/Disc_Engine/VertexBuffer.cpp
  src/Disc_Engine/VertexArray.cpp
 
+ src/Disc_Engine/Audio.cpp
  src/Disc_Engine/Window.cpp
  src/Disc_Engine/Exception.cpp
 

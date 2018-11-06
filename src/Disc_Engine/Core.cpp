@@ -9,10 +9,39 @@ using namespace Disc_Engine;
 std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 {
 	std::shared_ptr<Core> rtn = std::make_shared<Core>(); //want to return a shared pointer of core
-	rtn->m_quit = true;                                  //to the main, to then call entity through
+	rtn->m_quit = true;                                   //to the main, to then call entity through
 	rtn->m_self = rtn;                                    //core, and component through entity.
 
 	rtn->m_window.InitWin();                              //call the initialisation of the SDL window.
+
+
+
+	rtn->m_device = alcOpenDevice(NULL);
+	if (!rtn->m_device)
+	{
+		throw std::exception();
+	}
+
+	rtn->m_context = alcCreateContext(rtn->m_device, NULL);
+	if (!rtn->m_context)
+	{
+		alcCloseDevice(rtn->m_device);
+		throw std::exception();
+	}
+
+	if (!alcMakeContextCurrent(rtn->m_context))
+	{
+		alcDestroyContext(rtn->m_context);
+		alcCloseDevice(rtn->m_device);
+		throw std::exception();
+	}
+
+	//remember to close after use
+	//alcMakeContextCurrent(NULL)
+	//alcDestroyContext(m_context);
+	//alcCloseDevice(m_device);
+
+
 
 	return rtn; //return our pointer to core back to main.
 }
@@ -57,6 +86,10 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 void Core::End() 
 {
 	m_quit = true;
+
+	alcMakeContextCurrent(NULL);
+	alcDestroyContext(m_context);
+	alcCloseDevice(m_device);
 }
 
 std::shared_ptr<Entity> Core::AddEnt() 

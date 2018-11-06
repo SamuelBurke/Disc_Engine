@@ -20,28 +20,19 @@
 class TestScreen : public Disc_Engine::Component
 {
 public:
-	void OnInit(std::string _colour)
-	{
-	}
-
-	void OnBegin()
-	{
-	}
-
-	void OnTick()
-	{
-	}
-
-	void OnDisplay()
-	{
-	}
+	void OnInit(std::string _colour){}
+	void OnBegin(){}
+	void OnTick(){}
+	void OnDisplay(){}
 };
 
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
-
 	std::shared_ptr<Disc_Engine::Entity> ent = core->AddEnt();
+
+	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
+	audio->Play();
 
 	//std::shared_ptr<TestScreen> test = ent->AddComponent<TestScreen>("Green");
 	std::shared_ptr<Disc_Engine::MeshRenderer> mr = ent->AddComponent<Disc_Engine::MeshRenderer>();

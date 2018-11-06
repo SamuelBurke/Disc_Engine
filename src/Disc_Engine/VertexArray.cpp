@@ -47,7 +47,7 @@ int VertexArray::GetVertexCount()
 
 GLuint VertexArray::GetID()
 {
-	if (!m_dirty)
+	if (m_dirty)
 	{
 		glBindVertexArray(m_id);
 

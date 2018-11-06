@@ -3,6 +3,9 @@
 
 #include "Window.h"
 
+#include <AL/al.h>
+#include <AL/alc.h>
+
 #include <memory>     
 #include <vector>     
 
@@ -35,6 +38,8 @@ private:
 	std::weak_ptr<Core> m_self; //Stores a pointer of the core itself.
 
 	Window m_window;
+	ALCdevice* m_device;
+	ALCcontext* m_context;
 };
 }
 

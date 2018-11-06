@@ -73,14 +73,13 @@ using namespace Disc_Engine;
 ////	glUseProgram(m_id);
 ////}
 //
-//void Shader::Draw(VertArray &_vertArray)
+//void Shader::Draw(VertexArray &_vertexArray)
 //{
 //	glUseProgram(m_id);
-//	glBindVertexArray(_vertArray.GetID());
+//	glBindVertexArray(_vertexArray.GetID());
 //
-//	glDrawArrays(GL_TRIANGLES, 0, _vertArray.GetVertexCount());
+//	glDrawArrays(GL_TRIANGLES, 0, _vertexArray.GetVertexCount());
 //	
-//
 //	glBindVertexArray(0);
 //	glUseProgram(0);
 //}
@@ -286,8 +285,6 @@ void Shader::SetUniform(std::string _uniform, glm::mat4 _value)
 	{
 		throw std::exception();
 	}
-
-
 
 	glUseProgram(m_id);
 	glUniformMatrix4fv(uniformID, 1, GL_FALSE, glm::value_ptr(_value));

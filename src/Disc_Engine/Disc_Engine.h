@@ -5,5 +5,6 @@
 #include "Entity.h"
 #include "Component.h"
 #include "MeshRenderer.h"
+#include "Audio.h"
 
 #endif //DISC_ENGINE_H

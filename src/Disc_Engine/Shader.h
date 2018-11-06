@@ -4,23 +4,23 @@
 #include "Resource.h"
 
 #include <string>
-//#include <fstream>
-//#include <sstream>
-//#include <memory>
+#include <fstream>
+#include <sstream>
+#include <memory>
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
 //namespace Disc_Engine
 //{
-//class VertArray;
+//class VertexArray;
 //
 //class Shader : public Resource
 //{
 //public:
 //	Shader(const char* _vertPath, const char* _fragPath);
 //	//void Use();
-//	void Draw(VertArray &_vertArray);
+//	void Draw(VertexArray &_vertArray);
 //	void SetUniform(std::string _uniform, glm::vec4 _value);
 //	void SetUniform(std::string _uniform, float _value);
 //	void SetUniform(std::string _uniform, glm::mat4 _value);
