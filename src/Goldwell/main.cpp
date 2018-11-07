@@ -36,7 +36,7 @@ int main()
 
 	//std::shared_ptr<TestScreen> test = ent->AddComponent<TestScreen>("Green");
 	std::shared_ptr<Disc_Engine::MeshRenderer> mr = ent->AddComponent<Disc_Engine::MeshRenderer>();
-	//std::shared_ptr<Disc_Engine::MeshRenderer> mr2 = ent->GetComponent<Disc_Engine::MeshRenderer>();
+	std::shared_ptr<Disc_Engine::Transform> trans = ent->AddComponent<Disc_Engine::Transform>();
 
 	core->Begin(); //begin the core of the engine.
 

@@ -16,11 +16,15 @@ class VertexArray
 {
 public:
 	VertexArray();
-	void SetBuffer(std::string _attribute, std::weak_ptr<VertexBuffer> _buffer);
+	VertexArray(std::string _file);
+	void SetBuffer(std::string _attribute, std::shared_ptr<VertexBuffer> _buffer);
 	int GetVertexCount();
 	GLuint GetID();
 
 private:
+	void SplitStringWhitespace(std::string& _input, std::vector<std::string>& _output);
+	void SplitString(std::string& _input, char _splitter, std::vector<std::string>& _output);
+
 	GLuint m_id;
 	bool m_dirty;
 	std::vector <std::shared_ptr<VertexBuffer>> m_buffers;

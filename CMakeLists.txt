@@ -23,6 +23,15 @@ if (MSVC)
     ${CMAKE_SOURCE_DIR}/contrib/msvc-windows-x86/vorbis/lib
 )
 
+else()
+  include_directories(
+ 	 /usr/X11R6/include
+	 /usr/local/include
+)
+   link_directories(
+ 	 /usr/X11R6/include
+	 /usr/local/include
+)
 endif()
 
 if (MSVC)
@@ -45,6 +54,7 @@ add_library(Disc_Engine
  src/Disc_Engine/Exception.h
 
  src/Disc_Engine/MeshRenderer.h
+ src/Disc_Engine/Transform.h
  
  src/Disc_Engine/Resources.h
  src/Disc_Engine/Resource.h
@@ -64,10 +74,12 @@ add_library(Disc_Engine
  src/Disc_Engine/Exception.cpp
 
  src/Disc_Engine/MeshRenderer.cpp
+ src/Disc_Engine/Transform.cpp
 
  src/Disc_Engine/Mesh.cpp
  src/Disc_Engine/Texture.cpp
  src/Disc_Engine/Shader.cpp
+ contrib/stb_image/stb_image.cpp
 )
 
 if(MSVC)

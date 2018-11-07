@@ -1,5 +1,6 @@
 #include "Shader.h"
 #include "VertexArray.h"
+#include "Texture.h"
 
 #include <glm/ext.hpp>
 
@@ -218,6 +219,8 @@ Shader::Shader(std::string _vertex, std::string _fragment)
 	glAttachShader(m_id, fragmentShaderID);
 	glBindAttribLocation(m_id, 0, "in_Position");
 	glBindAttribLocation(m_id, 1, "in_Color");
+	glBindAttribLocation(m_id, 2, "in_TexCoord");
+	glBindAttribLocation(m_id, 3, "in_Normal");
 
 	if (glGetError() != GL_NO_ERROR)
 	{
@@ -243,7 +246,27 @@ void Shader::Draw(VertexArray& _vertexArray)
 	glUseProgram(m_id);
 	glBindVertexArray(_vertexArray.GetID());
 
+	for (size_t i = 0; i < m_samplers.size(); i++)
+	{
+		glActiveTexture(GL_TEXTURE0 + i);
+		
+		if (m_samplers.at(i).texture)
+		{
+			glBindTexture(GL_TEXTURE_2D, m_samplers.at(i).texture->GetID());
+		}
+		else
+		{
+			glBindTexture(GL_TEXTURE_2D, 0);
+		}
+	}
+
 	glDrawArrays(GL_TRIANGLES, 0, _vertexArray.GetVertexCount());
+
+	for (size_t i = 0; i < m_samplers.size(); i++)
+	{
+		glActiveTexture(GL_TEXTURE0 + i);
+		glBindTexture(GL_TEXTURE_2D, 0);
+	}
 
 	glBindVertexArray(0);
 	glUseProgram(0);
@@ -288,6 +311,38 @@ void Shader::SetUniform(std::string _uniform, glm::mat4 _value)
 
 	glUseProgram(m_id);
 	glUniformMatrix4fv(uniformID, 1, GL_FALSE, glm::value_ptr(_value));
+	glUseProgram(0);
+}
+
+void Shader::SetUniform(std::string _uniform, std::shared_ptr<Texture> _texture)
+{
+	GLuint uniformID = glGetUniformLocation(m_id, _uniform.c_str());
+
+	if (uniformID == -1)
+	{
+		throw std::exception();
+	}
+
+	for (size_t i = 0; i < m_samplers.size(); i++)
+	{
+		if (m_samplers.at(i).m_id == uniformID)
+		{
+			m_samplers.at(i).texture = _texture;
+
+			glUseProgram(m_id);
+			glUniform1i(uniformID, i);
+			glUseProgram(0);
+			return;
+		}
+	}
+
+	Sampler samp;
+	samp.m_id = uniformID;
+	samp.texture = _texture;
+	m_samplers.push_back(samp);
+
+	glUseProgram(m_id);
+	glUniform1i(uniformID, m_samplers.size() - 1);
 	glUseProgram(0);
 }
 

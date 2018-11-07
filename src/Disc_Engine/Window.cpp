@@ -32,8 +32,6 @@ void Window::InitWin()
 	{
 		throw std::exception();
 	}
-
-	std::cout << "Window Initialised Successfully" << std::endl;
 }
 
 void Window::ClearBuff()

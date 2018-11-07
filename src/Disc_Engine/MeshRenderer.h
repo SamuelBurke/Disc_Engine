@@ -9,6 +9,7 @@ namespace Disc_Engine
 {
 class Shader;
 class VertexArray;
+class Texture;
 
 class MeshRenderer : public Component
 {
@@ -24,6 +25,7 @@ private:
 
 	std::shared_ptr<VertexArray> m_shape;
 	std::shared_ptr<Shader> m_shader;
+	std::shared_ptr<Texture> m_texture;
 
 };
 }

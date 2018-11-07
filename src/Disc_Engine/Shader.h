@@ -7,6 +7,7 @@
 #include <fstream>
 #include <sstream>
 #include <memory>
+#include <vector>
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>
@@ -54,6 +55,13 @@
 namespace Disc_Engine
 {
 class VertexArray;
+class Texture;
+
+struct Sampler
+{
+	GLint m_id;
+	std::shared_ptr<Texture> texture;
+};
 
 class Shader : public Resource
 {
@@ -64,11 +72,13 @@ public:
 	void SetUniform(std::string _uniform, glm::vec4 _value);
 	void SetUniform(std::string _uniform, float _value);
 	void SetUniform(std::string _uniform, glm::mat4 _value);
+	void SetUniform(std::string _uniform, std::shared_ptr<Texture> _texture);
 
 	GLuint GetID();
 
 private:
 	GLuint m_id;
+	std::vector<Sampler> m_samplers;
 
 };
 }
