@@ -92,7 +92,7 @@ void Core::End()
 	alcCloseDevice(m_device);
 }
 
-std::shared_ptr<Entity> Core::AddEnt() 
+std::shared_ptr<Entity> Core::AddEntity() 
 {
 	std::shared_ptr<Entity> rtn = std::make_shared<Entity>(); // rtn is a pointer to the entity sent through this function.
 	m_entities.push_back(rtn);                                // Adds the rtn to the vector of entities.

@@ -6,13 +6,24 @@ using namespace Disc_Engine;
 
 void Transform::OnInit()
 {
-	glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
-	glm::mat4 trans;
-	trans = glm::translate(trans, glm::vec3(1.0f, 1.0f, 0.0f));
+}
 
-	vec = trans*vec;
+void Transform::OnDisplay()
+{
+	//glm::mat4 model(1.0f);
+	//model = glm::translate(model, glm::vec3(2.0f, -2.0f, -16.0f));
+	//model = glm::rotate(model, glm::radians(m_angle), glm::vec3(0, 1, 0));
 
-	std::cout << vec.x << vec.y << vec.z << std::endl;
+	//m_angle += 0.1f;
+
+	//std::cout << m_angle << std::endl;
+
+	//m_localRotation.y += 0.5f;
+	//while (m_localRotation.y > (3.14159265 * 2.0))
+	//{
+	//	m_localRotation.y -= (float)(3.14159265 * 2.0);
+	//}
+
 }
 
 void Transform::Translate(glm::vec3 _value)

@@ -29,7 +29,7 @@ public:
 	void End();
 
 	//! Function used to add an entity to the vector of entities. @ see line 32
-	std::shared_ptr<Entity> AddEnt();
+	std::shared_ptr<Entity> AddEntity();
 	
 private:
 	bool m_quit; //Boolean variable - Which is set to false when the engine is running.

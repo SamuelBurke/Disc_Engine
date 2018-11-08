@@ -1,6 +1,8 @@
 #include "Component.h"
 #include "Entity.h"
 
+#include <iostream>
+
 using namespace Disc_Engine;
 
 Component::~Component()
@@ -18,7 +20,6 @@ void Component::OnBegin()
 
 void Component::OnTick()
 {
-
 }
 
 void Component::OnDisplay()

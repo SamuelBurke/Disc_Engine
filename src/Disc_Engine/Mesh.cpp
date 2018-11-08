@@ -9,10 +9,6 @@ Mesh::~Mesh()
 {
 }
 
-
-
-
-
 std::shared_ptr<Mesh> Mesh::Generate()
 {
 	return std::shared_ptr<Mesh>();

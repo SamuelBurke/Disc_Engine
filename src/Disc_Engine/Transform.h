@@ -25,13 +25,14 @@ public:
 	void SetLocalScale(glm::vec3 _scale);
 
 private:
+	void OnDisplay();
+
 	glm::vec3 m_localPosition;
 	glm::vec3 m_localRotation;
 	glm::vec3 m_localScale;
 
 	//TESTING\\
 	
-
 };
 
 }

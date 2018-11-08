@@ -29,14 +29,14 @@ public:
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
-	std::shared_ptr<Disc_Engine::Entity> ent = core->AddEnt();
+	std::shared_ptr<Disc_Engine::Entity> teapot = core->AddEntity();
 
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
 	audio->Play();
 
-	//std::shared_ptr<TestScreen> test = ent->AddComponent<TestScreen>("Green");
-	std::shared_ptr<Disc_Engine::MeshRenderer> mr = ent->AddComponent<Disc_Engine::MeshRenderer>();
-	std::shared_ptr<Disc_Engine::Transform> trans = ent->AddComponent<Disc_Engine::Transform>();
+	//Gives the entity 'teapot' both a MeshRenderer component, and a Transform component.
+	std::shared_ptr<Disc_Engine::MeshRenderer> mr = teapot->AddComponent<Disc_Engine::MeshRenderer>();
+	std::shared_ptr<Disc_Engine::Transform> trans = teapot->AddComponent<Disc_Engine::Transform>();
 
 	core->Begin(); //begin the core of the engine.
 
