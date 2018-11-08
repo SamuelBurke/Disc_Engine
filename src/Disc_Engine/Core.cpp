@@ -70,6 +70,8 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 			(*it)->Tick(); //(*it) dereferences the shared ptr - How to use iterators with smart pointers.
 		}
 
+
+
 		m_window.ClearBuff(); // Clear the buffer before the entities are displayed.
 
 		for (std::vector<std::shared_ptr<Entity> >::iterator it = m_entities.begin(); it != m_entities.end(); it++)

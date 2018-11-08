@@ -7,8 +7,10 @@
 
 using namespace Disc_Engine;
 
-constexpr auto WINDOW_WIDTH = 800;
-constexpr auto WINDOW_HEIGHT = 600;
+//constexpr auto WINDOW_WIDTH = 800;
+//constexpr auto WINDOW_HEIGHT = 600;
+int WINDOW_WIDTH = 800;
+int WINDOW_HEIGHT = 600;
 
 void Window::InitWin()
 {
@@ -32,12 +34,17 @@ void Window::InitWin()
 	{
 		throw std::exception();
 	}
+
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_DEPTH_TEST);
 }
 
 void Window::ClearBuff()
 {
-	glClearColor(0.0f, 0.0f, 0.3f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
+	SDL_GetWindowSize(m_window, &WINDOW_WIDTH, &WINDOW_HEIGHT);
+	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+	glClearColor(0.0f, 0.3f, 0.3f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//std::cout << "Buffer Cleared Successfully" << std::endl;
 }

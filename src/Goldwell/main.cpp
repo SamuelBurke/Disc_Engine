@@ -37,6 +37,7 @@ int main()
 	//Gives the entity 'teapot' both a MeshRenderer component, and a Transform component.
 	std::shared_ptr<Disc_Engine::MeshRenderer> mr = teapot->AddComponent<Disc_Engine::MeshRenderer>();
 	std::shared_ptr<Disc_Engine::Transform> trans = teapot->AddComponent<Disc_Engine::Transform>();
+	std::shared_ptr<Disc_Engine::Camera> camera = teapot->AddComponent<Disc_Engine::Camera>();
 
 	core->Begin(); //begin the core of the engine.
 
