@@ -13,10 +13,13 @@ public:
 	void ClearBuff();
 	void SwapWin();
 
+
 	//unsigned int GetWid() { return m_wid; }
 	//unsigned int GetHei() { return m_hei; }
 
 private:
+	bool InitGL();
+
 	unsigned int m_wid, m_hei;
 
 	SDL_Window* m_window;

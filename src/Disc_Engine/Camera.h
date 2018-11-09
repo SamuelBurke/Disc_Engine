@@ -32,6 +32,10 @@ private:
 	glm::vec3 m_cameraUp;
 
 	glm::mat4 m_view;
+	float m_radius;
+
+	float m_cameraX;
+	float m_cameraZ;
 
 
 	Input m_input;

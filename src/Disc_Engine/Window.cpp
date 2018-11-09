@@ -4,6 +4,7 @@
 
 #include <exception>
 #include <iostream>
+#include <string>
 
 using namespace Disc_Engine;
 
@@ -12,28 +13,60 @@ using namespace Disc_Engine;
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
 
+bool Window::InitGL()
+{
+	glewExperimental = GL_TRUE;
+
+	GLenum err = glewInit();
+	if (GLEW_OK != err)
+	{
+		//glewInit() failed.
+		std::cerr << "Error: GLEW failed to initalise: " << glewGetErrorString(err) << std::endl;
+		return false;
+	}
+
+	std::cout << "[INFO]: Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
+
+	std::cout << "[INFO]: OpenGL Vendor: " << glGetString(GL_VENDOR) << std::endl;
+	std::cout << "[INFO]: OpenGL Renderer: " << glGetString(GL_RENDERER) << std::endl;
+	std::cout << "[INFO]: OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
+	std::cout << "[INFO]: OpenGL Shading Language Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+
+	return true;
+}
+
 void Window::InitWin()
 {
 
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
+		std::cout << "Error: Cannot initialise SDL" << std::endl;
+
 		throw std::exception();
 	}
+
+	//Major version number 4
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+	//Minor version number 3
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
 	m_window = SDL_CreateWindow("Disc Engine",
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
 		WINDOW_WIDTH, WINDOW_HEIGHT,
-		SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
+		SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 
 	if (!SDL_GL_CreateContext(m_window))
 	{
 		throw std::exception();
 	}
 
-	if (glewInit() != GLEW_OK)
+	if (!InitGL())
 	{
 		throw std::exception();
 	}
+
+	//SDL_SetRelativeMouseMode(SDL_TRUE);
 
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
