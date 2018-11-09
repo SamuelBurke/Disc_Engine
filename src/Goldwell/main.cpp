@@ -29,15 +29,20 @@ public:
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
-	std::shared_ptr<Disc_Engine::Entity> teapot = core->AddEntity();
+	std::shared_ptr<Disc_Engine::Entity> models = core->AddEntity();
+	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
 	audio->Play();
 
-	//Gives the entity 'teapot' both a MeshRenderer component, and a Transform component.
-	std::shared_ptr<Disc_Engine::MeshRenderer> mr = teapot->AddComponent<Disc_Engine::MeshRenderer>();
-	std::shared_ptr<Disc_Engine::Transform> trans = teapot->AddComponent<Disc_Engine::Transform>();
-	std::shared_ptr<Disc_Engine::Camera> camera = teapot->AddComponent<Disc_Engine::Camera>();
+	//Gives the entity 'models' both a MeshRenderer component, and a Transform component.
+	std::shared_ptr<Disc_Engine::MeshRenderer> mr = models->AddComponent<Disc_Engine::MeshRenderer>();
+	//std::shared_ptr<Disc_Engine::Transform> trans = entity->AddComponent<Disc_Engine::Transform>();
+	//std::shared_ptr<Disc_Engine::Camera> camera = entity->AddComponent<Disc_Engine::Camera>();
+
+
+	std::shared_ptr<Disc_Engine::Camera> cam = camera->AddComponent<Disc_Engine::Camera>();
+	std::shared_ptr<Disc_Engine::Transform> transform = camera->AddComponent<Disc_Engine::Transform>();
 
 	core->Begin(); //begin the core of the engine.
 

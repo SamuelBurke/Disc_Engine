@@ -2,6 +2,7 @@
 #define DISC_ENGINE_MESHRENDERER_H
 
 #include "Component.h"
+#include "Camera.h"
 
 #include <memory>
 
@@ -34,6 +35,8 @@ private:
 	//std::shared_ptr<Texture> m_texture;
 
 	float m_angle;
+
+	Camera m_camera;
 
 };
 }
