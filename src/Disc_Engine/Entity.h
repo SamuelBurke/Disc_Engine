@@ -78,8 +78,8 @@ private:
 	void Display();
 	
 	std::vector<std::shared_ptr<Component>> m_components;
-	std::weak_ptr<Entity> m_self; // Stores a pointer to the current entity, set in Core.cpp @ line 36.
-	std::weak_ptr<Core>   m_core; // stores a pointer to the core, set in the Core.cpp @ line 37.
+	std::weak_ptr<Entity> m_self; // Stores a pointer to the current entity, set in Core.cpp @ line 101.
+	std::weak_ptr<Core>   m_core; // stores a pointer to the core, set in the Core.cpp @ line 102.
 };
 }
 

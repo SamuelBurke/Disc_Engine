@@ -20,6 +20,8 @@ public:
 	void OnInit();
 	void OnTick();
 
+	glm::mat4 GetProjection();
+
 private:
 	void OnDisplay();
 
@@ -31,7 +33,9 @@ private:
 	glm::vec3 m_cameraRight;
 	glm::vec3 m_cameraUp;
 
-	glm::mat4 m_view;
+	glm::mat4 m_viewMatrix;
+	glm::mat4 m_projMatrix;
+
 	float m_radius;
 
 	float m_cameraX;

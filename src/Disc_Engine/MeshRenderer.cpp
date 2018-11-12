@@ -38,6 +38,7 @@ void MeshRenderer::OnInit()
 	m_catTex = std::make_shared<Texture>("../resources/textures/testcat_tex.png");
 
 	m_shader = std::make_shared<Shader>("../resources/shaders/shader.vert", "../resources/shaders/shader.frag");
+
 }
 
 
@@ -49,10 +50,17 @@ void MeshRenderer::OnDisplay()
 	//m_shader->SetUniform("in_Texture", m_texture);
 	//m_shader->Draw(*m_shape);
 
-	m_shader->SetUniform("in_Projection", glm::perspective(glm::radians(45.0f), (float)800 / (float)600, 0.1f, 100.f));
+
+	m_shader->SetUniform("in_Projection", glm::perspective(glm::radians(45.0f), (float)800 / (float)600, 0.1f, 100.f)); //mat4
+
+	m_shader->SetUniform("in_Projection", GetEntity<Camera>()->GetProjection());
+
+
+	//glm::perspective needs to be a member variable within camera.
+	//PSEUDO:::getCore->getEntity<Camera>->getPerspective 
 
 	glm::mat4 model(1.0f);
-	m_shader->SetUniform("in_View", glm::inverse(model));
+	m_shader->SetUniform("in_View", glm::inverse(model)); //mat4
 
 	//draw hall
 	model = glm::mat4(1.0f);

@@ -1,5 +1,6 @@
 #include "Component.h"
 #include "Entity.h"
+#include "Camera.h"
 
 #include <iostream>
 
@@ -30,6 +31,11 @@ std::shared_ptr<Entity> Component::GetEntity()
 {
 	return m_entity.lock();
 }
+
+//std::shared_ptr<Entity> Component::GetEntity<Camera>()
+//{
+//	//NEEDS TO BECOME A TEMPLATE FUNCTION
+//}
 
 std::shared_ptr<Core> Component::GetCore()
 {

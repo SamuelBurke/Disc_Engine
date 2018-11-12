@@ -6,6 +6,8 @@ using namespace Disc_Engine;
 
 void Camera::OnInit()
 {
+	m_projMatrix = glm::perspective(glm::radians(45.0f), (float)800 / (float)600, 0.1f, 100.0f));
+
 	//m_cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
 	//m_cameraTarget = glm::vec3(0.0f, 0.0f, 0.0f);
 	//m_cameraDirection = glm::normalize(m_cameraPos - m_cameraTarget);
@@ -33,4 +35,9 @@ void Camera::OnTick()
 void Camera::OnDisplay()
 {
 	//May not be necessary...Not sure yet
+}
+
+glm::mat4 Camera::GetProjection()
+{
+	return m_projMatrix;
 }
