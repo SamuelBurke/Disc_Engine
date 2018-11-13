@@ -3,6 +3,7 @@
 #include "VertexArray.h"
 #include "Shader.h"
 #include "Texture.h"
+#include "Core.h"
 
 #include <iostream>
 
@@ -32,6 +33,7 @@ void MeshRenderer::OnInit()
 	m_angle = 0;
 
 	m_hall = std::make_shared<VertexArray>("../resources/models/testhall.obj");
+
 	m_hallTex = std::make_shared<Texture>("../resources/textures/testhall_tex.png");
 
 	m_cat = std::make_shared<VertexArray>("../resources/models/testcat.obj");
@@ -44,20 +46,8 @@ void MeshRenderer::OnInit()
 
 void MeshRenderer::OnDisplay()
 {
-	//m_shader->SetUniform("in_View", glm::mat4(1.0f));
-	//m_shader->SetUniform("in_Model", glm::mat4(1.0f));
-	//m_shader->SetUniform("in_Projection", glm::mat4(1.0f));
-	//m_shader->SetUniform("in_Texture", m_texture);
-	//m_shader->Draw(*m_shape);
 
-
-	m_shader->SetUniform("in_Projection", glm::perspective(glm::radians(45.0f), (float)800 / (float)600, 0.1f, 100.f)); //mat4
-
-	m_shader->SetUniform("in_Projection", GetEntity<Camera>()->GetProjection());
-
-
-	//glm::perspective needs to be a member variable within camera.
-	//PSEUDO:::getCore->getEntity<Camera>->getPerspective 
+	m_shader->SetUniform("in_Projection", GetCore()->GetEntity<Camera>()->GetProjection());
 
 	glm::mat4 model(1.0f);
 	m_shader->SetUniform("in_View", glm::inverse(model)); //mat4
@@ -79,5 +69,4 @@ void MeshRenderer::OnDisplay()
 	m_shader->Draw(*m_cat);
 
 	m_angle += 0.01f;
-	//std::cout << m_angle << std::endl;
 }

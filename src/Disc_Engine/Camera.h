@@ -33,8 +33,12 @@ private:
 	glm::vec3 m_cameraRight;
 	glm::vec3 m_cameraUp;
 
-	glm::mat4 m_viewMatrix;
+
+	//glm::mat4 m_viewMatrix;
 	glm::mat4 m_projMatrix;
+	
+
+
 
 	float m_radius;
 

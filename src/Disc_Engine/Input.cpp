@@ -6,23 +6,31 @@ using namespace Disc_Engine;
 
 void Input::Init()
 {
-	SDL_GetKeyboardState(&m_keys);
-	m_currentKeys  = new Uint8[m_keys];
-	m_previousKeys = new Uint8[m_keys];
-
-	std::memcpy(m_currentKeys, SDL_GetKeyboardState(NULL), m_keys);
-	std::memcpy(m_previousKeys, m_currentKeys, m_keys);
 }
 
 void Input::Update()
 {
-	std::memcpy(m_previousKeys, m_currentKeys, m_keys); // copies the memory of the "currentKeys" into the "previousKeys" at the length of "keys"
-	std::memcpy(m_currentKeys, SDL_GetKeyboardState(NULL), m_keys);
+	SDL_PumpEvents();
+	SDL_GetMouseState(&m_mouseX, &m_mouseY);
+	m_currentKey = SDL_GetKeyboardState(NULL);
+
+
+	//std::cout << "X: " << m_mouseX << std::endl;
+	//std::cout << "Y: " << m_mouseY << std::endl;
 }
 
 bool Input::isKeyPressed(SDL_Scancode _keyCode)
 {
-	return m_currentKeys[_keyCode] && !m_previousKeys[_keyCode];
+	
+	if (m_currentKey[_keyCode])
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+
 }
 
 bool Input::isKeyHeld(SDL_Scancode _keyCode)
@@ -46,15 +54,7 @@ void Input::End()
 //{
 //}
 
-//void Input::MouseUpdate()
-//{
-//	SDL_PumpEvents();
-//
-//	SDL_GetMouseState(&m_mouseX, &m_mouseY);
-//
-//	//std::cout << "MouseX: " << m_mouseX << std::endl;
-//	//std::cout << "MouseY: " << m_mouseY << std::endl;
-//}
+
 
 //bool Input::GetKey(int _keyCode)
 //{

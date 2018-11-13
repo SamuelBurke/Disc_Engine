@@ -23,6 +23,10 @@ public:
 private:
 	int m_keys;
 
+	int m_mouseX;
+	int m_mouseY;
+
+	const Uint8* m_currentKey;
 	Uint8* m_currentKeys;
 	Uint8* m_previousKeys;
 

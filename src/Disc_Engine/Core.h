@@ -9,11 +9,13 @@
 #include <memory>     
 #include <vector>     
 
+#include "Entity.h"
+#include "Input.h"
+
 namespace Disc_Engine // Encapsulates the class within the engine namespace. For the sake of efficient programming.
 {
-class Entity;	 /* Forward declaration of Entity allows usage of <Entity>
-				  @ see line 29 */
-				
+//class Entity;	 /* Forward declaration of Entity allows usage of <Entity>
+				  //@ see line 29 */
 
 /*! Creates the Core class of the engine. The core contains all entities used within the game engine. */
 class Core 
@@ -30,6 +32,9 @@ public:
 
 	//! Function used to add an entity to the vector of entities. @ see line 32
 	std::shared_ptr<Entity> AddEntity();
+
+	template <typename T>
+	std::shared_ptr<T> GetEntity();
 	
 private:
 	bool m_quit; //Boolean variable - Which is set to false when the engine is running.
@@ -38,9 +43,25 @@ private:
 	std::weak_ptr<Core> m_self; //Stores a pointer of the core itself.
 
 	Window m_window;
+	Input m_input;
 	ALCdevice* m_device;
 	ALCcontext* m_context;
 };
+
+template<typename T>
+inline std::shared_ptr<T> Core::GetEntity()
+{
+	for (std::shared_ptr<Entity> e : m_entities)
+	{
+		if (e->GetComponent<T>())
+		{
+			return e->GetComponent<T>();
+		}
+	}
+
+	throw std::exception();
+}
+
 }
 
 #endif // !DISC_ENGINE_CORE_H

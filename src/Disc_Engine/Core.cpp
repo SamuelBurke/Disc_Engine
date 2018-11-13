@@ -13,8 +13,7 @@ std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 	rtn->m_self = rtn;                                    //core, and component through entity.
 
 	rtn->m_window.InitWin();                              //call the initialisation of the SDL window.
-
-
+	rtn->m_input.Init();
 
 	rtn->m_device = alcOpenDevice(NULL);
 	if (!rtn->m_device)

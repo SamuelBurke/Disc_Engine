@@ -38,6 +38,7 @@ public:
 			}
 		}
 
+		return false;
 		throw std::exception();
 	}
 

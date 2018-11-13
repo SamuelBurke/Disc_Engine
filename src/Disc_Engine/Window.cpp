@@ -8,10 +8,8 @@
 
 using namespace Disc_Engine;
 
-//constexpr auto WINDOW_WIDTH = 800;
-//constexpr auto WINDOW_HEIGHT = 600;
-int WINDOW_WIDTH = 800;
-int WINDOW_HEIGHT = 600;
+int Window::m_width = 800;
+int Window::m_height = 600;
 
 bool Window::InitGL()
 {
@@ -37,7 +35,6 @@ bool Window::InitGL()
 
 void Window::InitWin()
 {
-
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		std::cout << "Error: Cannot initialise SDL" << std::endl;
@@ -53,7 +50,7 @@ void Window::InitWin()
 
 	m_window = SDL_CreateWindow("Disc Engine",
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-		WINDOW_WIDTH, WINDOW_HEIGHT,
+		m_width, m_height,
 		SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 
 	if (!SDL_GL_CreateContext(m_window))
@@ -74,8 +71,8 @@ void Window::InitWin()
 
 void Window::ClearBuff()
 {
-	SDL_GetWindowSize(m_window, &WINDOW_WIDTH, &WINDOW_HEIGHT);
-	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+	SDL_GetWindowSize(m_window, &m_width, &m_height);
+	glViewport(0, 0, m_width, m_height);
 	glClearColor(0.0f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -87,4 +84,14 @@ void Window::SwapWin()
 	SDL_GL_SwapWindow(m_window);
 
 	//std::cout << "Window Swapped Successfully" << std::endl;
+}
+
+int Window::GetWidth()
+{
+	return m_width;
+}
+
+int Window::GetHeight()
+{
+	return m_height;
 }

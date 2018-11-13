@@ -30,7 +30,6 @@ int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
 	std::shared_ptr<Disc_Engine::Entity> models = core->AddEntity();
-	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
 	audio->Play();
@@ -41,6 +40,7 @@ int main()
 	//std::shared_ptr<Disc_Engine::Camera> camera = entity->AddComponent<Disc_Engine::Camera>();
 
 
+	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 	std::shared_ptr<Disc_Engine::Camera> cam = camera->AddComponent<Disc_Engine::Camera>();
 	std::shared_ptr<Disc_Engine::Transform> transform = camera->AddComponent<Disc_Engine::Transform>();
 
