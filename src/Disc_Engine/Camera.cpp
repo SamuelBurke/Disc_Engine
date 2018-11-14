@@ -23,11 +23,12 @@ void Camera::OnTick()
 
 	if (m_input.isKeyPressed(SDL_SCANCODE_W))
 	{
-		//m_radius += 1.0f;
+		m_radius += 1.0f;
 	}
+
 	else if (m_input.isKeyPressed(SDL_SCANCODE_S))
 	{
-		//m_radius -= 1.0f;
+		m_radius -= 1.0f;
 	}
 }
 

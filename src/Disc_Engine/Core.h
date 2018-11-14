@@ -34,7 +34,7 @@ public:
 	std::shared_ptr<Entity> AddEntity();
 
 	template <typename T>
-	std::shared_ptr<T> GetEntity();
+	std::shared_ptr<T> GetComponent();
 	
 private:
 	bool m_quit; //Boolean variable - Which is set to false when the engine is running.
@@ -49,7 +49,7 @@ private:
 };
 
 template<typename T>
-inline std::shared_ptr<T> Core::GetEntity()
+inline std::shared_ptr<T> Core::GetComponent()
 {
 	for (std::shared_ptr<Entity> e : m_entities)
 	{

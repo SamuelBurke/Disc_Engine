@@ -47,8 +47,6 @@ std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 
 void Core::Begin() //called at the end of main() - Here is where the main loop will be.
 {
-	//std::shared_ptr<Entity> ent = AddEnt();
-	//std::shared_ptr<MeshRenderer> tri = ent->AddComponent<MeshRenderer>();
 
 	m_quit = false;
 

@@ -20,18 +20,9 @@ public:
 private:
 	void OnDisplay();
 
-	//GLuint m_positionsVboId, m_vaoId;
-	//GLuint m_programId;
-
-	//std::shared_ptr<VertexArray> m_shape;
-	std::shared_ptr<VertexArray> m_cat;
-	std::shared_ptr<VertexArray> m_hall;
-
-	std::shared_ptr<Texture> m_catTex;
-	std::shared_ptr<Texture> m_hallTex;
-
+	std::shared_ptr<VertexArray> m_debugCube;
+	std::shared_ptr<Texture> m_cubeTexture;
 	std::shared_ptr<Shader> m_shader;
-	//std::shared_ptr<Texture> m_texture;
 
 	float m_angle;
 
