@@ -33,23 +33,6 @@ bool Input::isKeyPressed(SDL_Scancode _keyCode)
 
 }
 
-bool Input::isKeyHeld(SDL_Scancode _keyCode)
-{
-	return m_currentKeys[_keyCode];
-}
-
-bool Input::isKeyReleased(SDL_Scancode _keyCode)
-{
-	return !m_currentKeys[_keyCode] && m_previousKeys[_keyCode];
-}
-
-
-void Input::End()
-{
-	delete[] m_currentKeys;
-	delete[] m_previousKeys;
-}
-
 //void Input::Init()
 //{
 //}

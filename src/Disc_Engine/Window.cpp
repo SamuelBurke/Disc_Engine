@@ -73,7 +73,7 @@ void Window::ClearBuff()
 {
 	SDL_GetWindowSize(m_window, &m_width, &m_height);
 	glViewport(0, 0, m_width, m_height);
-	glClearColor(0.0f, 0.3f, 0.3f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.2, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//std::cout << "Buffer Cleared Successfully" << std::endl;

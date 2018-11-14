@@ -32,13 +32,10 @@ int main()
 	std::shared_ptr<Disc_Engine::Entity> models = core->AddEntity();
 
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
-	audio->Play();
+	//audio->Play();
 
 	//Gives the entity 'models' both a MeshRenderer component, and a Transform component.
 	std::shared_ptr<Disc_Engine::MeshRenderer> mr = models->AddComponent<Disc_Engine::MeshRenderer>();
-	//std::shared_ptr<Disc_Engine::Transform> trans = entity->AddComponent<Disc_Engine::Transform>();
-	//std::shared_ptr<Disc_Engine::Camera> camera = entity->AddComponent<Disc_Engine::Camera>();
-
 
 	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 	std::shared_ptr<Disc_Engine::Camera> cam = camera->AddComponent<Disc_Engine::Camera>();

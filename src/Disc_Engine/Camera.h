@@ -5,10 +5,10 @@
 
 #include "Component.h"
 #include "Input.h"
+#include "Transform.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-
 #include <vector>
 
 namespace Disc_Engine
@@ -21,32 +21,21 @@ public:
 	void OnTick();
 
 	glm::mat4 GetProjection();
+	glm::mat4 GetView();
+	glm::mat4 GetModel();
 
 private:
-	void OnDisplay();
 
-	glm::vec3 m_cameraPos;
-	glm::vec3 m_cameraTarget;
-	glm::vec3 m_cameraDirection;
-
-	glm::vec3 m_up;
-	glm::vec3 m_cameraRight;
-	glm::vec3 m_cameraUp;
-
-
-	//glm::mat4 m_viewMatrix;
-	glm::mat4 m_projMatrix;
+	glm::mat4 m_projectionMatrix;
+	glm::mat4 m_viewMatrix;
+	glm::mat4 m_modelMatrix; 
 	
-
-
-
 	float m_radius;
-
-	float m_cameraX;
-	float m_cameraZ;
-
+	float m_near;
+	float m_far;
 
 	Input m_input;
+	Transform m_transform;
 };
 
 }

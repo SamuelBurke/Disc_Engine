@@ -20,19 +20,28 @@ public:
 	void Rotate(glm::vec3 _value);
 	void Scale(glm::vec3 _value);
 
-	void SetLocalPosition(glm::vec3 _position);
-	void SetLocalRotation(glm::vec3 _rotation);
-	void SetLocalScale(glm::vec3 _scale);
+	void SetPosition(glm::vec3 _position);
+	void SetRotation(glm::vec3 _rotation); 
+	void SetScale(glm::vec3 _scale);
+	glm::vec3 GetPosition();
+	glm::vec3 GetRotation();
+	glm::vec3 GetScale();
+
+	//glm::vec3 GetTransform();
 
 private:
+	void OnTick();
 	void OnDisplay();
 
-	glm::vec3 m_localPosition;
-	glm::vec3 m_localRotation;
-	glm::vec3 m_localScale;
+	glm::vec3 m_position;
+	glm::vec3 m_rotation;
+	glm::vec3 m_scale;
+
+	//glm::vec3 m_transform;
 
 	//TESTING\\
 	
+
 };
 
 }

@@ -2,7 +2,6 @@
 #define DISC_ENGINE_MESHRENDERER_H
 
 #include "Component.h"
-#include "Camera.h"
 
 #include <memory>
 
@@ -16,7 +15,7 @@ class MeshRenderer : public Component
 {
 public:
 	void OnInit();
-	//void OnTick() override;
+	void OnTick();
 
 private:
 	void OnDisplay();
@@ -35,8 +34,6 @@ private:
 	//std::shared_ptr<Texture> m_texture;
 
 	float m_angle;
-
-	Camera m_camera;
 
 };
 }

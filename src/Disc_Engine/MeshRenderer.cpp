@@ -1,9 +1,10 @@
+#include "Camera.h"
+#include "Core.h"
 #include "MeshRenderer.h"
-#include "VertexBuffer.h"
-#include "VertexArray.h"
 #include "Shader.h"
 #include "Texture.h"
-#include "Core.h"
+#include "VertexArray.h"
+#include "VertexBuffer.h"
 
 #include <iostream>
 
@@ -14,26 +15,9 @@ using namespace Disc_Engine;
 
 void MeshRenderer::OnInit()
 {
-
-	//std::shared_ptr<VertexBuffer> positions = std::make_shared<VertexBuffer>();
-	//positions->Add(glm::vec3( 0.0f,  0.5f, 0.0f));
-	//positions->Add(glm::vec3(-0.5f, -0.5f, 0.0f));
-	//positions->Add(glm::vec3( 0.5f, -0.5f, 0.0f));
-
-	//std::shared_ptr<VertexBuffer> colors = std::make_shared<VertexBuffer>();
-	//colors->Add(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-	//colors->Add(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
-	//colors->Add(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
-
-	//m_shape->SetBuffer("in_Position", positions);
-
-	//m_shape = std::make_shared<VertexArray>("../resources/models/teapot_pgg.obj");
-	//m_texture = std::make_shared<Texture>("../resources/textures/default.png");
-
 	m_angle = 0;
 
 	m_hall = std::make_shared<VertexArray>("../resources/models/testhall.obj");
-
 	m_hallTex = std::make_shared<Texture>("../resources/textures/testhall_tex.png");
 
 	m_cat = std::make_shared<VertexArray>("../resources/models/testcat.obj");
@@ -43,27 +27,37 @@ void MeshRenderer::OnInit()
 
 }
 
+void MeshRenderer::OnTick()
+{
+	m_shader->SetUniform("in_Projection", GetCore()->GetEntity<Camera>()->GetProjection()); // Fetches the projection matrix from the camera component in order to set this uniform.
+	m_shader->SetUniform("in_View", GetCore()->GetEntity<Camera>()->GetView()); // Fetches the view matrix from the camera component.
+}
+
 
 void MeshRenderer::OnDisplay()
 {
-
-	m_shader->SetUniform("in_Projection", GetCore()->GetEntity<Camera>()->GetProjection());
-
-	glm::mat4 model(1.0f);
-	m_shader->SetUniform("in_View", glm::inverse(model)); //mat4
-
 	//draw hall
-	model = glm::mat4(1.0f);
-	model = glm::translate(model, glm::vec3(2.0f, -2.0f, -16.0f));
-	model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0, 1, 0));
-	m_shader->SetUniform("in_Model", model);
-	m_shader->SetUniform("in_Texture", m_hallTex);
-	m_shader->Draw(*m_hall);
+	//glm::mat4 hall; // declare the model variable
+	//hall = GetCore()->GetEntity<Camera>()->GetModel(); // fetches the model matrix from the camera component, to be used in the lines below.
+	//GetCore()->GetEntity<Transform>()->SetPosition(glm::vec3(2.0f, -2.0f, -16.0f));
+	//hall = glm::translate(hall, GetCore()->GetEntity<Transform>()->GetPosition());
+	//
+	//GetCore()->GetEntity<Transform>()->SetRotation(glm::vec3(0, 1, 0));
+	//hall = glm::rotate(hall, glm::radians(90.0f), GetCore()->GetEntity<Transform>()->GetRotation());
+
+	//m_shader->SetUniform("in_Model", hall);
+	//m_shader->SetUniform("in_Texture", m_hallTex);
+	//m_shader->Draw(*m_hall);
 
 	//draw cat
-	model = glm::mat4(1.0f);
-	model = glm::translate(model, glm::vec3(0, -2.1f, -20.0f));
-	model = glm::rotate(model, glm::radians(m_angle), glm::vec3(0, 1, 0));
+	glm::mat4 model;
+	model = GetCore()->GetEntity<Camera>()->GetModel();
+	GetCore()->GetEntity<Transform>()->SetPosition(glm::vec3(0, -2.1f, -20.0f));
+	model = glm::translate(model, GetCore()->GetEntity<Transform>()->GetPosition());
+
+	GetCore()->GetEntity<Transform>()->SetRotation(glm::vec3(0, 1, 0));
+	model = glm::rotate(model, glm::radians(m_angle), GetCore()->GetEntity<Transform>()->GetRotation());
+
 	m_shader->SetUniform("in_Model", model);
 	m_shader->SetUniform("in_Texture", m_catTex);
 	m_shader->Draw(*m_cat);
