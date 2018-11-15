@@ -30,11 +30,11 @@ public:
 	{
 		for (size_t i = 0; i < m_components.size(); i++)
 		{
-			std::shared_ptr<T> test = std::dynamic_pointer_cast<T>(m_components.at(i));
+			std::shared_ptr<T> currentComponent = std::dynamic_pointer_cast<T>(m_components.at(i));
 
-			if (test)
+			if (currentComponent)
 			{
-				return test;
+				return currentComponent;
 			}
 		}
 

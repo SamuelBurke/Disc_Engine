@@ -22,13 +22,11 @@ public:
 
 	glm::mat4 GetProjection();
 	glm::mat4 GetView();
-	glm::mat4 GetModel();
+	//glm::mat4 GetModel();
 
 private:
-
 	glm::mat4 m_projectionMatrix;
 	glm::mat4 m_viewMatrix;
-	glm::mat4 m_modelMatrix; 
 	
 	float m_radius;
 	float m_near;

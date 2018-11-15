@@ -33,13 +33,15 @@ void MeshRenderer::OnTick()
 
 void MeshRenderer::OnDisplay()
 {
-	glm::mat4 cube;
-	cube = GetCore()->GetComponent<Camera>()->GetModel();
+	glm::mat4 cube(1.0f);
 	GetCore()->GetComponent<Transform>()->SetPosition(glm::vec3(0, 0.0f, -10.0f));
 	cube = glm::translate(cube, GetCore()->GetComponent<Transform>()->GetPosition());
 	
 	GetCore()->GetComponent<Transform>()->SetRotation(glm::vec3(1, 0, 1));
 	cube = glm::rotate(cube, glm::radians(m_angle), GetCore()->GetComponent<Transform>()->GetRotation());
+
+	//GetCore()->GetComponent<Transform>()->SetScale(glm::vec3(10, 10, 10));
+	//cube = glm::scale(cube, GetCore()->GetComponent<Transform>()->GetScale());
 
 	m_shader->SetUniform("in_Model", cube);
 	m_shader->SetUniform("in_Texture", m_cubeTexture);

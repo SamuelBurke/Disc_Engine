@@ -26,9 +26,9 @@ void Transform::OnTick()
 
 void Transform::Translate(glm::vec3 _value)
 {
-	glm::translate(glm::mat4(1), glm::vec3(_value));
+	//glm::translate(glm::mat4(1), glm::vec3(_value));
 
-	//m_position += _value;
+	m_position += _value;
 
 	//m_position.x += _value.x;
 	//m_position.y += _value.y;
@@ -37,9 +37,9 @@ void Transform::Translate(glm::vec3 _value)
 
 void Transform::Rotate(glm::vec3 _value)
 {
-	glm::rotate(glm::mat4(1), glm::radians(90.0f), glm::vec3(_value));
+	//glm::rotate(glm::mat4(1), glm::radians(90.0f), glm::vec3(_value));
 
-	//m_rotation += _value;
+	m_rotation += _value;
 
 	//m_rotation.x += _value.x;
 	//m_rotation.y += _value.y;
