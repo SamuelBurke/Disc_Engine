@@ -95,3 +95,8 @@ int Window::GetHeight()
 {
 	return m_height;
 }
+
+SDL_Window* Window::GetWindow()
+{
+	return m_window;
+}

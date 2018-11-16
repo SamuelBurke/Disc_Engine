@@ -6,6 +6,7 @@
 #include "Component.h"
 #include "Input.h"
 #include "Transform.h"
+#include "Window.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -22,7 +23,6 @@ public:
 
 	glm::mat4 GetProjection();
 	glm::mat4 GetView();
-	//glm::mat4 GetModel();
 
 private:
 	glm::mat4 m_projectionMatrix;
@@ -32,7 +32,12 @@ private:
 	float m_near;
 	float m_far;
 
+	float m_cameraSpeed;
+
+	//glm::vec2 m_screenCenter;
+
 	Input m_input;
+	Window m_window;
 	Transform m_transform;
 };
 

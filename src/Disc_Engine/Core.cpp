@@ -12,7 +12,9 @@ std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 	rtn->m_quit = true;                                   //to the main, to then call entity through
 	rtn->m_self = rtn;                                    //core, and component through entity.
 
+
 	rtn->m_window.InitWin();                              //call the initialisation of the SDL window.
+
 	rtn->m_input.Init();
 
 	rtn->m_device = alcOpenDevice(NULL);
@@ -52,6 +54,8 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 
 	while (!m_quit)
 	{
+		m_input.Update();
+
 		SDL_Event e = { 0 };
 
 		while (SDL_PollEvent(&e))          
@@ -79,6 +83,10 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 
 		m_window.SwapWin();
 
+		if (m_input.isKeyPressed(SDL_SCANCODE_ESCAPE))	
+		{
+			m_quit = true;
+		}
 	}
 }
 

@@ -18,7 +18,7 @@ namespace Disc_Engine // Encapsulates the class within the engine namespace. For
 				  //@ see line 29 */
 
 /*! Creates the Core class of the engine. The core contains all entities used within the game engine. */
-class Core 
+class Core
 {
 public:
 	//! First function called in core, for initialisation. 

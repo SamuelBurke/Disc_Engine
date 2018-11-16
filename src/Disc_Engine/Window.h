@@ -13,6 +13,8 @@ public:
 	void ClearBuff();
 	void SwapWin();
 
+	SDL_Window* GetWindow();
+
 	static int GetWidth();
 	static int GetHeight();
 
