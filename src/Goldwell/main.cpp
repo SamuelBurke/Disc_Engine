@@ -31,8 +31,9 @@ int main()
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
 	std::shared_ptr<Disc_Engine::Entity> cube = core->AddEntity();
 
+
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
-	//audio->Play();
+	audio->Play();
 
 	//Gives the entity 'models' both a MeshRenderer component, and a Transform component.
 	std::shared_ptr<Disc_Engine::MeshRenderer> meshRenderer = cube->AddComponent<Disc_Engine::MeshRenderer>();
@@ -43,5 +44,6 @@ int main()
 
 	core->Begin(); //begin the core of the engine.
 
+	core->End(); // After the loop has been exited, call the END function in core.
 	return 0;
 }

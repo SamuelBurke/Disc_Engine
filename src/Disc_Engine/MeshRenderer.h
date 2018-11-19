@@ -22,6 +22,7 @@ private:
 
 	std::shared_ptr<VertexArray> m_debugCube;
 	std::shared_ptr<Texture> m_cubeTexture;
+
 	std::shared_ptr<Shader> m_shader;
 
 	float m_angle;

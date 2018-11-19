@@ -34,7 +34,9 @@ private:
 
 	float m_cameraSpeed;
 
-	//glm::vec2 m_screenCenter;
+	glm::vec3 m_cameraFront;
+	glm::vec3 m_cameraRight;
+	glm::vec3 m_cameraUp;
 
 	Input m_input;
 	Window m_window;

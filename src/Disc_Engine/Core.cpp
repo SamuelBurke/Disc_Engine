@@ -36,14 +36,7 @@ std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 		alcCloseDevice(rtn->m_device);
 		throw std::exception();
 	}
-
-	//remember to close after use
-	//alcMakeContextCurrent(NULL)
-	//alcDestroyContext(m_context);
-	//alcCloseDevice(m_device);
-
-
-
+	   
 	return rtn; //return our pointer to core back to main.
 }
 
