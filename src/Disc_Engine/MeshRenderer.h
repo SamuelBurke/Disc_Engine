@@ -15,7 +15,7 @@ class MeshRenderer : public Component
 {
 public:
 	void OnInit();
-	void OnTick();
+	void OnTick(float _deltaTime);
 
 private:
 	void OnDisplay();
@@ -23,9 +23,14 @@ private:
 	std::shared_ptr<VertexArray> m_debugCube;
 	std::shared_ptr<Texture> m_cubeTexture;
 
+	std::shared_ptr<VertexArray> m_wall;
+	std::shared_ptr<Texture> m_wallTexture;
+
 	std::shared_ptr<Shader> m_shader;
 
 	float m_angle;
+
+
 
 };
 }

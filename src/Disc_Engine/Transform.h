@@ -30,7 +30,7 @@ public:
 	//glm::vec3 GetTransform();
 
 private:
-	void OnTick();
+	void OnTick(float _deltaTime);
 	void OnDisplay();
 
 	glm::vec3 m_position;

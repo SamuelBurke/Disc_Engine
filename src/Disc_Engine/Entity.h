@@ -73,7 +73,7 @@ public:
 
 private:
 	//! Function to be called every frame. Updates every entity.
-	void Tick(); 
+	void Tick(float _deltaTime); 
 
 	//! Function to be called after everything has been updated as is ready to display
 	void Display();

@@ -25,7 +25,7 @@ private:
 
 	virtual void OnInit();
 	virtual void OnBegin();
-	virtual void OnTick();
+	virtual void OnTick(float _deltaTime);
 	virtual void OnDisplay();
 
 };

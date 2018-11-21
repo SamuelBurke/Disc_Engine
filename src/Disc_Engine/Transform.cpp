@@ -14,7 +14,7 @@ void Transform::OnDisplay()
 	//std::cout << "Transform::OnDisplay called" << std::endl;
 }
 
-void Transform::OnTick()
+void Transform::OnTick(float _deltaTime)
 {
 	/*std::cout << "Position: " << m_position.x << m_position.y << m_position.z << std::endl;
 	std::cout << "Rotation: " << m_rotation.x << m_rotation.y << m_rotation.z << std::endl;

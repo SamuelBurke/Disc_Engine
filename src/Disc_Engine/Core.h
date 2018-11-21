@@ -1,8 +1,6 @@
 #ifndef DISC_ENGINE_CORE_H
 #define DISC_ENGINE_CORE_H
 
-#include "Window.h"
-
 #include <AL/al.h>
 #include <AL/alc.h>
 
@@ -10,7 +8,9 @@
 #include <vector>     
 
 #include "Entity.h"
+#include "Environment.h"
 #include "Input.h"
+#include "Window.h"
 
 namespace Disc_Engine // Encapsulates the class within the engine namespace. For the sake of efficient programming.
 {
@@ -44,6 +44,7 @@ private:
 
 	Window m_window;
 	Input m_input;
+	Environment m_environment;
 	ALCdevice* m_device;
 	ALCcontext* m_context;
 };

@@ -2,7 +2,7 @@
 
 using namespace Disc_Engine;
 
-void Entity::Tick()
+void Entity::Tick(float _deltaTime)
 {
 	for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
 	{
@@ -12,7 +12,7 @@ void Entity::Tick()
 			(*it)->m_began = true;
 		}
 
-		(*it)->OnTick();
+		(*it)->OnTick(_deltaTime);
 	}
 }
 

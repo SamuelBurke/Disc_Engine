@@ -17,6 +17,9 @@ std::shared_ptr<Core> Core::Init() //called at the beginning of main().
 
 	rtn->m_input.Init();
 
+	rtn->m_environment.Init();
+
+
 	rtn->m_device = alcOpenDevice(NULL);
 	if (!rtn->m_device)
 	{
@@ -45,6 +48,7 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 
 	m_quit = false;
 
+
 	while (!m_quit)
 	{
 		m_input.Update();
@@ -59,9 +63,11 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 			}
 		}
 
+		float deltaTime = m_environment.CalculateDeltaTime();
+
 		for (std::vector<std::shared_ptr<Entity> >::iterator it = m_entities.begin(); it != m_entities.end(); it++)
 		{
-			(*it)->Tick(); //(*it) dereferences the shared ptr - How to use iterators with smart pointers.
+			(*it)->Tick(deltaTime); //(*it) dereferences the shared ptr - How to use iterators with smart pointers.
 		}
 
 
@@ -78,7 +84,7 @@ void Core::Begin() //called at the end of main() - Here is where the main loop w
 
 		if (m_input.isKeyPressed(SDL_SCANCODE_ESCAPE))	
 		{
-			m_quit = true;
+			End();
 		}
 	}
 }
@@ -87,8 +93,8 @@ void Core::End()
 {
 	m_quit = true;
 
-	alcMakeContextCurrent(NULL);
 	alcDestroyContext(m_context);
+	alcMakeContextCurrent(NULL);
 	alcCloseDevice(m_device);
 }
 

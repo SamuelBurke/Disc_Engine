@@ -53,6 +53,7 @@ add_library(Disc_Engine
  src/Disc_Engine/Window.h 
  src/Disc_Engine/Exception.h
  src/Disc_Engine/Input.h
+ src/Disc_Engine/Environment.h
 
  src/Disc_Engine/MeshRenderer.h
  src/Disc_Engine/Transform.h
@@ -74,6 +75,7 @@ add_library(Disc_Engine
  src/Disc_Engine/Window.cpp
  src/Disc_Engine/Exception.cpp
  src/Disc_Engine/Input.cpp
+ src/Disc_Engine/Environment.cpp
 
  src/Disc_Engine/MeshRenderer.cpp
  src/Disc_Engine/Transform.cpp

@@ -7,7 +7,7 @@
 using namespace Disc_Engine;
 
 constexpr float CAMERA_SPEED = 0.25f;
-constexpr float CAMERA_SENSITIVTY = 0.015f;
+constexpr float CAMERA_SENSITIVTY = 1.0f;
 
 void Camera::OnInit()
 {
@@ -26,7 +26,7 @@ void Camera::OnInit()
 }
 
 
-void Camera::OnTick()
+void Camera::OnTick(float _deltaTime)
 {
 	m_input.Update();
 
@@ -53,13 +53,13 @@ void Camera::OnTick()
 
 
 
-	if (m_input.isKeyPressed(SDL_SCANCODE_W)) {	m_transform.Rotate(m_cameraUp * CAMERA_SENSITIVTY); }
+	if (m_input.isKeyPressed(SDL_SCANCODE_W)) {	m_transform.Rotate(m_cameraUp * CAMERA_SENSITIVTY * _deltaTime); }
 
-	if (m_input.isKeyPressed(SDL_SCANCODE_S)) { m_transform.Rotate(-m_cameraUp * CAMERA_SENSITIVTY);}
+	if (m_input.isKeyPressed(SDL_SCANCODE_S)) { m_transform.Rotate(-m_cameraUp * CAMERA_SENSITIVTY * _deltaTime);}
 
-	if (m_input.isKeyPressed(SDL_SCANCODE_A)) { m_transform.Rotate( m_cameraRight * CAMERA_SENSITIVTY);}
+	if (m_input.isKeyPressed(SDL_SCANCODE_A)) { m_transform.Rotate( m_cameraRight * CAMERA_SENSITIVTY * _deltaTime);}
 
-	if (m_input.isKeyPressed(SDL_SCANCODE_D)) { m_transform.Rotate(-m_cameraRight * CAMERA_SENSITIVTY);}
+	if (m_input.isKeyPressed(SDL_SCANCODE_D)) { m_transform.Rotate(-m_cameraRight * CAMERA_SENSITIVTY * _deltaTime);}
 
 
 

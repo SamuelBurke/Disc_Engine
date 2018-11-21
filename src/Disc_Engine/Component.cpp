@@ -19,7 +19,7 @@ void Component::OnBegin()
 {
 }
 
-void Component::OnTick()
+void Component::OnTick(float _deltaTime)
 {
 }
 

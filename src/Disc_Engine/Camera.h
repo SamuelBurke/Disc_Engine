@@ -19,7 +19,7 @@ class Camera : public Component
 {
 public:
 	void OnInit();
-	void OnTick();
+	void OnTick(float _deltaTime);
 
 	glm::mat4 GetProjection();
 	glm::mat4 GetView();
