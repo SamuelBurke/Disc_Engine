@@ -29,14 +29,16 @@ public:
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
-	std::shared_ptr<Disc_Engine::Entity> cube = core->AddEntity();
+	std::shared_ptr<Disc_Engine::Entity> ent = core->AddEntity();
 
 
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
 	//audio->Play();
 
 	//Gives the entity 'models' both a MeshRenderer component, and a Transform component.
-	std::shared_ptr<Disc_Engine::MeshRenderer> meshRenderer = cube->AddComponent<Disc_Engine::MeshRenderer>();
+	std::shared_ptr<Disc_Engine::MeshRenderer> meshRenderer = ent->AddComponent<Disc_Engine::MeshRenderer>();
+	//std::shared_ptr<Disc_Engine::Transform> transform = ent->AddComponent<Disc_Engine::Transform>();
+
 
 	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 	std::shared_ptr<Disc_Engine::Camera> cam = camera->AddComponent<Disc_Engine::Camera>();

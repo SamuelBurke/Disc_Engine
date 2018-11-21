@@ -59,7 +59,7 @@ add_library(Disc_Engine
  src/Disc_Engine/Transform.h
  src/Disc_Engine/Camera.h
  
- src/Disc_Engine/Resources.h
+ src/Disc_Engine/ResourcesHandler.h
  src/Disc_Engine/Resource.h
  src/Disc_Engine/Texture.h
  src/Disc_Engine/Shader.h

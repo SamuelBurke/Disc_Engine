@@ -53,7 +53,6 @@ void Transform::Scale(glm::vec3 _value)
 
 void Transform::SetPosition(glm::vec3 _position)
 {
-	//TRANSLATE HERE BITCH COME ON NOW////////////////////////////////////////////////////
 	m_position = _position;
 }
 

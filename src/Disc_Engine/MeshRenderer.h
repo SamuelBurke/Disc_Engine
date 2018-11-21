@@ -32,6 +32,14 @@ private:
 
 
 
+	glm::mat4 m_cube;
+	glm::vec3 m_cubePos;
+
+	glm::vec3 m_secondCubePos;
+	glm::mat4 m_secondCube;
+
+
+
 };
 }
 

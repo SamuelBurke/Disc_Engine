@@ -15,7 +15,7 @@ void Camera::OnInit()
 	m_near = 0.1f;
 	m_far = 100.0f;
 
-	m_transform.SetPosition(glm::vec3(0.0f, 0.0f, 0.0f));
+	m_transform.SetPosition(glm::vec3(0.0f, 0.0f, 10.0f));
 	m_transform.SetRotation(glm::vec3(0, 0, 0));
 
 	m_cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);

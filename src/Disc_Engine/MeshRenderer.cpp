@@ -1,10 +1,12 @@
 #include "Camera.h"
 #include "Core.h"
 #include "MeshRenderer.h"
-#include "Shader.h"
-#include "Texture.h"
-#include "VertexArray.h"
 #include "VertexBuffer.h"
+
+#include "Shader.h"
+#include "VertexArray.h"
+#include "Texture.h"
+#include "Resource.h"
 
 #include <iostream>
 
@@ -16,6 +18,14 @@ using namespace Disc_Engine;
 void MeshRenderer::OnInit()
 {
 	m_angle = 0;
+	
+	//m_cube = glm::mat4(1.0f);
+	////GetCore()->GetComponent<Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
+	//glm::vec3 m_cubePos = GetCore()->GetComponent<Transform>()->GetPosition();
+
+
+	//m_secondCube = glm::mat4(1.0f);
+
 
 	m_debugCube = std::make_shared<VertexArray>("../resources/models/cube.obj");
 	m_cubeTexture = std::make_shared<Texture>("../resources/textures/default.png");
@@ -30,6 +40,8 @@ void MeshRenderer::OnInit()
 
 	catch(...)
 	{
+		throw std::exception();
+
 		m_wallTexture = std::make_shared<Texture>("../resources/textures/default.jpg");
 	}
 
@@ -46,6 +58,8 @@ void MeshRenderer::OnTick(float _deltaTime)
 	//std::cout << _deltaTime << std::endl;
 	//GetCore()->GetComponent<Transform>()->SetScale(glm::vec3(10, 10, 10));
 
+	m_cube = glm::translate(m_cube, m_cubePos);
+
 	m_angle += 100.0f * _deltaTime;
 }
 
@@ -54,14 +68,21 @@ void MeshRenderer::OnDisplay()
 {
 
 	//main cube
-	glm::mat4 cube(1.0f);
-	GetCore()->GetComponent<Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
-	glm::vec3 cubePos = GetCore()->GetComponent<Transform>()->GetPosition();
-	cube = glm::translate(cube, cubePos);
+    //GetCore()->GetComponent<Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
 
-	GetCore()->GetComponent<Transform>()->SetRotation(glm::vec3(-1, 0, 1));
-	glm::vec3 cubeRot = GetCore()->GetComponent<Transform>()->GetRotation();
-	cube = glm::rotate(cube, glm::radians(m_angle), cubeRot);
+
+
+
+
+
+	glm::mat4 cube(1.0f);
+	//GetCore()->GetComponent<Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
+	//glm::vec3 cubePos = GetCore()->GetComponent<Transform>()->GetPosition();
+	//cube = glm::translate(cube, cubePos);
+
+	//GetCore()->GetComponent<Transform>()->SetRotation(glm::vec3(-1, 0, 1));
+	//glm::vec3 cubeRot = GetCore()->GetComponent<Transform>()->GetRotation();
+	//cube = glm::rotate(cube, glm::radians(m_angle), cubeRot);
 
 	m_shader->SetUniform("in_Model", cube);
 	m_shader->SetUniform("in_Texture", m_cubeTexture);

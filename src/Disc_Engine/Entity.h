@@ -38,7 +38,8 @@ public:
 			}
 		}
 
-		return false;
+		//std::cout << typeid(T).name() << "\n";
+		return nullptr;
 		throw std::exception();
 	}
 

@@ -1,6 +1,8 @@
 #ifndef DISC_ENGINE_VERTEXARRAY_H
 #define DISC_ENGINE_VERTEXARRAY_H
 
+#include "Resource.h"
+
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
@@ -12,11 +14,14 @@ namespace Disc_Engine
 {
 class VertexBuffer;
 
-class VertexArray
+class VertexArray : public Resource
 {
 public:
 	VertexArray();
-	VertexArray(std::string _file);
+	//VertexArray(std::string _file);
+
+	void Load(std::string _file);
+
 	void SetBuffer(std::string _attribute, std::shared_ptr<VertexBuffer> _buffer);
 	int GetVertexCount();
 	GLuint GetID();
