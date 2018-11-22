@@ -4,8 +4,10 @@
 
 using namespace Disc_Engine;
 
-void Texture::Load(std::string _file)
+std::shared_ptr<Texture> Texture::Load(std::string _file)
 {
+	std::shared_ptr<Texture> rtn = std::make_shared<Texture>();
+
 	int w = 0;
 	int h = 0;
 	int channels = 0;
@@ -35,6 +37,7 @@ void Texture::Load(std::string _file)
 
 	glBindTexture(GL_TEXTURE_2D, 0);
 
+	return rtn;
 }
 
 glm::vec2 Texture::GetSize()

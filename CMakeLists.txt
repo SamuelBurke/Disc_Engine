@@ -39,7 +39,10 @@ if (MSVC)
 endif()
 
 add_executable(Goldwell 
- src/Goldwell/main.cpp)
+ src/Goldwell/main.cpp
+ src/Goldwell/Player.h
+ src/Goldwell/Player.cpp
+ )
 
 add_library(Disc_Engine
  src/Disc_Engine/Disc_Engine.h

@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <memory>
-#include <list>
+#include <vector>
 
 namespace Disc_Engine
 {
@@ -16,8 +16,8 @@ class ResourcesHandler
 {
 public:
 
-	template <typename T> 
-	std::shared_ptr<T> Create();
+	//template <typename T> 
+	//std::shared_ptr<T> Create();
 
 	template <typename T>
 	std::shared_ptr<T> Load(std::string _filePath);
@@ -27,29 +27,41 @@ public:
 
 
 private:
-	std::list<std::shared_ptr<Resource>> m_resources;
+	std::vector<std::shared_ptr<Resource>> m_resources;
 };
 
-
-template <typename T>
-inline std::shared_ptr<T> ResourcesHandler::Create()
-{
-	std::shared_ptr<T> rtn = std::make_shared<T>();
-
-	m_resources.push_back(rtn);
-
-	return rtn;
-}
+//
+//template <typename T>
+//inline std::shared_ptr<T> ResourcesHandler::Create()
+//{
+//	std::shared_ptr<T> rtn = std::make_shared<T>();
+//	rtn->Create();
+//
+//	return rtn;
+//}
 
 template<typename T>
 inline std::shared_ptr<T> ResourcesHandler::Load(std::string _filePath)
 {
 	//call load from here? Using template passed through?
 
-	Resource resource;
-	resource.m_filePath = _filePath;
+	for (size_t i = 0; i < m_resources.size(); i++)
+	{
+		if (m_resources.at(i)->GetFilePath() == _filePath)
+		{
+			std::shared_ptr<T> rtn = std::dynamic_pointer_cast<T>(m_resources.at(i));
+				
 
-	return std::shared_ptr<T>();
+
+			return rtn;
+		}
+	}
+	std::shared_ptr<T> rtn = std::make_shared<T>();
+	rtn->Load(_filePath);
+
+	m_resources.push_back(rtn);
+
+	return rtn;
 }
 
 

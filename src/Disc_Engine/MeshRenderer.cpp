@@ -60,7 +60,7 @@ void MeshRenderer::OnTick(float _deltaTime)
 {
 	//m_shader->SetUniform("in_Projection", GetCore()->GetComponent<Camera>()->GetProjection()); // Fetches the projection matrix from the camera component in order to set this uniform.
 	//m_shader->SetUniform("in_View", GetCore()->GetComponent<Camera>()->GetView()); // Fetches the view matrix from the camera component.
-
+	
 	//std::cout << _deltaTime << std::endl;
 	//GetCore()->GetComponent<Transform>()->SetScale(glm::vec3(10, 10, 10));
 

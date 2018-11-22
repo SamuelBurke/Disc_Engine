@@ -10,7 +10,8 @@ class ResourcesHandler;
 
 class Resource
 {
-friend class ResourcesHandler;
+public:
+	std::string GetFilePath() { return m_filePath; }
 
 private:
 	std::string m_filePath;

@@ -18,7 +18,7 @@ public:
 
 	std::shared_ptr<Core> GetCore();
 	std::shared_ptr<Entity> GetEntity();
-	std::shared_ptr<ResourcesHandler> GetResourcesHandler();
+	static std::shared_ptr<ResourcesHandler> GetResourcesHandler();
 
 private:
 	std::weak_ptr<Entity> m_entity;
