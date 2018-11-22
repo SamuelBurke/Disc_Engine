@@ -6,9 +6,12 @@
 
 namespace Disc_Engine
 {
+class ResourcesHandler;
 
 class Resource
 {
+friend class ResourcesHandler;
+
 private:
 	std::string m_filePath;
 };

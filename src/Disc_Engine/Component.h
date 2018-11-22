@@ -7,6 +7,7 @@ namespace Disc_Engine
 {
 class Entity;
 class Core;
+class ResourcesHandler;
 
 class Component
 {
@@ -17,7 +18,7 @@ public:
 
 	std::shared_ptr<Core> GetCore();
 	std::shared_ptr<Entity> GetEntity();
-
+	std::shared_ptr<ResourcesHandler> GetResourcesHandler();
 
 private:
 	std::weak_ptr<Entity> m_entity;

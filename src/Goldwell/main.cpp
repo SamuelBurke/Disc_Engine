@@ -31,6 +31,10 @@ int main()
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
 	std::shared_ptr<Disc_Engine::Entity> ent = core->AddEntity();
 
+	//std::shared_ptr<Disc_Engine::ResourcesHandler> resource;
+	//std::shared_ptr<Disc_Engine::Shader> shader = resource->Create<Disc_Engine::Shader>();
+	//std::shared_ptr<Disc_Engine::Shader> shader = Disc_Engine::Component::GetResources();
+
 
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
 	//audio->Play();
