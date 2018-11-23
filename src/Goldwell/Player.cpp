@@ -7,36 +7,33 @@
 
 void Player::OnInit()
 {
-	m_angle = 0;
+	m_speed = glm::vec3(1.0f, 0.0f, 0.0f);
 
 	m_debugCube = std::make_shared<Disc_Engine::VertexArray>("../resources/models/cube.obj");
-	m_defaultTexture = std::make_shared<Disc_Engine::Texture>("../resources/textures/default.png");
-	m_shader = std::make_shared<Disc_Engine::Shader>("../resources/shaders/shader.vert", "../resources/shaders/shader.frag");
-	
+	m_defaultTexture = std::make_shared<Disc_Engine::Texture>("../resources/textures/default.png");	
+
+
+	//GetCore()->GetComponent<Disc_Engine::Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
+	//GetCore()->GetComponent<Disc_Engine::Transform>()->SetRotation(glm::vec3(-1, 0, 1));
 }
 
 void Player::OnTick(float _deltaTime)
 {
-	m_shader->SetUniform("in_Projection", GetCore()->GetComponent<Disc_Engine::Camera>()->GetProjection());
-	m_shader->SetUniform("in_View", GetCore()->GetComponent<Disc_Engine::Camera>()->GetView());
+	GetCore()->GetComponent<Disc_Engine::Transform>()->Translate(glm::vec3(m_speed) * _deltaTime);
 
-
-	m_angle += 100.0f * _deltaTime;
+	//m_angle += 100.0f * _deltaTime;
 }
 
 void Player::OnDisplay()
 {
-	glm::mat4 cube(1.0f);
-	
-	GetCore()->GetComponent<Disc_Engine::Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
-	glm::vec3 cubePos = GetCore()->GetComponent<Disc_Engine::Transform>()->GetPosition();
-	cube = glm::translate(cube, cubePos);
+}
 
-	GetCore()->GetComponent<Disc_Engine::Transform>()->SetRotation(glm::vec3(-1, 0, 1));
-	glm::vec3 cubeRot = GetCore()->GetComponent<Disc_Engine::Transform>()->GetRotation();
-	cube = glm::rotate(cube, glm::radians(m_angle), cubeRot);
+std::shared_ptr<Disc_Engine::Texture> Player::GetTexture()
+{
+	return m_defaultTexture;
+}
 
-	m_shader->SetUniform("in_Model", cube);
-	m_shader->SetUniform("in_Texture", m_defaultTexture);
-	m_shader->Draw(*m_debugCube);
+std::shared_ptr<Disc_Engine::VertexArray> Player::GetModel()
+{
+	return m_debugCube;
 }

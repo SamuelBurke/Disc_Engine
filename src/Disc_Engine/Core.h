@@ -12,6 +12,8 @@
 #include "Input.h"
 #include "Window.h"
 
+#include "Goldwell/World.h"
+
 namespace Disc_Engine // Encapsulates the class within the engine namespace. For the sake of efficient programming.
 {
 //class Entity;	 /* Forward declaration of Entity allows usage of <Entity>
@@ -47,6 +49,9 @@ private:
 	Environment m_environment;
 	ALCdevice* m_device;
 	ALCcontext* m_context;
+
+
+	World m_world;
 };
 
 template<typename T>

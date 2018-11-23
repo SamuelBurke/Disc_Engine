@@ -18,17 +18,21 @@ class Player : public Disc_Engine::Component
 public:
 	void OnInit();
 
+	std::shared_ptr<Disc_Engine::Texture> GetTexture();
+	std::shared_ptr<Disc_Engine::VertexArray> GetModel();
+
 private:
 	void OnTick(float _deltaTime);
 	void OnDisplay();
 
-	float m_angle;
+	glm::vec3 m_speed;
+
+	//float m_angle;
 
 	//TESTING\\	
 
 	std::shared_ptr<Disc_Engine::VertexArray> m_debugCube;
 	std::shared_ptr<Disc_Engine::Texture> m_defaultTexture;
-	std::shared_ptr<Disc_Engine::Shader> m_shader;
 };
 
 #endif // !PLAYER_H

@@ -26,13 +26,7 @@ void Transform::OnTick(float _deltaTime)
 
 void Transform::Translate(glm::vec3 _value)
 {
-	//glm::translate(glm::mat4(1), glm::vec3(_value));
-
 	m_position += _value;
-
-	//m_position.x += _value.x;
-	//m_position.y += _value.y;
-	//m_position.z += _value.z;
 }
 
 void Transform::Rotate(glm::vec3 _value)

@@ -42,6 +42,8 @@ add_executable(Goldwell
  src/Goldwell/main.cpp
  src/Goldwell/Player.h
  src/Goldwell/Player.cpp
+ src/Goldwell/World.h
+ src/Goldwell/World.cpp
  )
 
 add_library(Disc_Engine
