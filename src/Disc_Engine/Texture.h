@@ -15,9 +15,11 @@ public:
 	//static std::shared_ptr<Texture> Generate(unsigned int _width, unsigned int _height);
 	//static std::shared_ptr<Texture> Load(std::string _filePath);
 
+	Texture(std::string _filePath);
+
 	//void Load(std::string _file);
 
-	std::shared_ptr<Texture> Load(std::string _filePath);
+	//std::shared_ptr<Texture> Load(std::string _filePath);
 
 	glm::vec2 GetSize();
 	GLuint GetID();

@@ -6,7 +6,7 @@
 
 using namespace Disc_Engine;
 
-void VertexArray::Load(std::string _file)
+VertexArray::VertexArray(std::string _file)
 {
 	m_dirty = false;
 	glGenVertexArrays(1, &m_id);

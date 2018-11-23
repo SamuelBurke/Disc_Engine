@@ -18,9 +18,9 @@ class VertexArray : public Resource
 {
 public:
 	VertexArray();
-	//VertexArray(std::string _file);
+	VertexArray(std::string _file);
 
-	void Load(std::string _file);
+	//void Load(std::string _file);
 
 	void SetBuffer(std::string _attribute, std::shared_ptr<VertexBuffer> _buffer);
 	int GetVertexCount();

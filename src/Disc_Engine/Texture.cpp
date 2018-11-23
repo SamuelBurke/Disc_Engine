@@ -4,15 +4,15 @@
 
 using namespace Disc_Engine;
 
-std::shared_ptr<Texture> Texture::Load(std::string _file)
+Texture::Texture(std::string _filePath)
 {
-	std::shared_ptr<Texture> rtn = std::make_shared<Texture>();
+	//std::shared_ptr<Texture> rtn = std::make_shared<Texture>();
 
 	int w = 0;
 	int h = 0;
 	int channels = 0;
 
-	unsigned char *data = stbi_load(_file.c_str(), &w, &h, &channels, 4);
+	unsigned char *data = stbi_load(_filePath.c_str(), &w, &h, &channels, 4);
 
 	if (!data)
 	{
@@ -37,7 +37,7 @@ std::shared_ptr<Texture> Texture::Load(std::string _file)
 
 	glBindTexture(GL_TEXTURE_2D, 0);
 
-	return rtn;
+	//return rtn;
 }
 
 glm::vec2 Texture::GetSize()

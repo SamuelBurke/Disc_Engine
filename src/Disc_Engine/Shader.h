@@ -26,8 +26,8 @@ struct Sampler
 class Shader : public Resource
 {
 public:
-	//Shader(std::string _vertex, std::string _fragment);
-	void Load(std::string _vertex, std::string _fragment);
+	Shader(std::string _vertex, std::string _fragment);
+	//void Load(std::string _vertex, std::string _fragment);
 	void Draw(VertexArray& _vertexArray);
 
 	void SetUniform(std::string _uniform, glm::vec4 _value);

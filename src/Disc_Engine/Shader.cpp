@@ -10,7 +10,7 @@
 using namespace Disc_Engine;
 
 
-void Shader::Load(std::string _vertex, std::string _fragment)
+Shader::Shader(std::string _vertex, std::string _fragment)
 {
 	std::ifstream file(_vertex.c_str());
 	std::string vertexSource;
