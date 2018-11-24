@@ -16,6 +16,7 @@ void Player::Init(std::shared_ptr<Disc_Engine::Transform> _transform)
 	m_defaultTexture = std::make_shared<Disc_Engine::Texture>("../resources/textures/default.png");	
 
 	m_transform->SetPosition(glm::vec3(0.0f, 0.0f, -18.0f));
+	m_playerParts.push_back(1);
 
 	//GetCore()->GetComponent<Disc_Engine::Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
 	//GetCore()->GetComponent<Disc_Engine::Transform>()->SetRotation(glm::vec3(-1, 0, 1));
@@ -37,6 +38,13 @@ void Player::Update(float _deltaTime)
 	if (m_input.isKeyPressed(SDL_SCANCODE_D) || m_input.isKeyPressed(SDL_SCANCODE_RIGHT)) { m_direction = glm::vec3(1.0f, 0.0f, 0.0f);  }
 
 	if (m_input.isKeyPressed(SDL_SCANCODE_A) || m_input.isKeyPressed(SDL_SCANCODE_LEFT)) { m_direction = glm::vec3(-1.0f, 0.0f, 0.0f); }
+
+	if (m_input.isKeyPressed(SDL_SCANCODE_SPACE))
+	{
+		m_playerParts.push_back(1);
+	}
+
+	std::cout << m_playerParts.size() << std::endl;
 
 	m_transform->Translate(m_direction * m_speed * _deltaTime);
 }

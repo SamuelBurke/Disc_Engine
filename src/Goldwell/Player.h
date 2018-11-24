@@ -10,7 +10,7 @@
 
 #include "Disc_Engine/Component.h"
 
-
+#include <vector>
 #include <memory>
 
 class Player
@@ -36,7 +36,7 @@ private:
 
 
 
-
+	std::vector<int> m_playerParts;
 
 
 	std::shared_ptr<Disc_Engine::Transform> m_transform;
