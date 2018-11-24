@@ -37,9 +37,9 @@ void MeshRenderer::OnDisplay()
 	cube = glm::translate(cube, cubePos);
 
 	m_shader->SetUniform("in_Model", cube);
-	m_shader->SetUniform("in_Texture", GetCore()->GetComponent<Player>()->GetTexture());
+	m_shader->SetUniform("in_Texture", GetCore()->GetComponent<World>()->GetTexture());
 
-	m_shader->Draw(*GetCore()->GetComponent<Player>()->GetModel());
+	m_shader->Draw(*GetCore()->GetComponent<World>()->GetModel());
 
 
 

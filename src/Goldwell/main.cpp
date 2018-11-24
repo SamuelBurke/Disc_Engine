@@ -8,29 +8,29 @@
 //---------------------------------------------------------------------------------------------------//
 
 #include <Disc_Engine/Disc_Engine.h> //allows the use of Engine elements in our game main. Core, Entity etc.
-#include "Player.h"
+#include "World.h"
 
 #include <iostream>
+#include <memory>
 
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
+
 	std::shared_ptr<Disc_Engine::Entity> user = core->AddEntity();
 	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 	
-
-	std::shared_ptr<Player> player = user->AddComponent<Player>();
-	std::shared_ptr<Disc_Engine::Transform> transform = user->AddComponent<Disc_Engine::Transform>();
-	//transform->SetPosition(glm::vec3(0.0f, 0.0f, 0.0f));
 	std::shared_ptr<Disc_Engine::Camera> cam = camera->AddComponent<Disc_Engine::Camera>();
 	std::shared_ptr<Disc_Engine::Transform> trans = camera->AddComponent<Disc_Engine::Transform>();
 
-	std::shared_ptr<Disc_Engine::MeshRenderer> meshRenderer = user->AddComponent<Disc_Engine::MeshRenderer>();
-	
+	std::shared_ptr<Disc_Engine::Transform> transform = user->AddComponent<Disc_Engine::Transform>();
+
 	std::shared_ptr<World> world = user->AddComponent<World>();
 
+	std::shared_ptr<Disc_Engine::MeshRenderer> meshRenderer = user->AddComponent<Disc_Engine::MeshRenderer>();
 
 
+	
 	//std::shared_ptr<Disc_Engine::ResourcesHandler> resource;
 	//std::shared_ptr<Disc_Engine::Shader> shader = resource->Create<Disc_Engine::Shader>();
 	//std::shared_ptr<Disc_Engine::Shader> shader = Disc_Engine::Component::GetResourcesHandler()->Load

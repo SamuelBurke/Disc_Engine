@@ -1,6 +1,7 @@
 #include "Component.h"
 #include "Entity.h"
 #include "ResourcesHandler.h"
+#include "Transform.h"
 
 #include <iostream>
 
@@ -36,6 +37,11 @@ std::shared_ptr<Entity> Component::GetEntity()
 std::shared_ptr<Core> Component::GetCore()
 {
 	return GetEntity()->GetCore();
+}
+
+std::shared_ptr<Transform> Component::GetTransform()
+{
+	return GetEntity()->GetComponent<Transform>();
 }
 
 std::shared_ptr<ResourcesHandler> Component::GetResourcesHandler()

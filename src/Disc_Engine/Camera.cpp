@@ -53,14 +53,14 @@ void Camera::OnTick(float _deltaTime)
 
 
 
-	if (m_input.isKeyPressed(SDL_SCANCODE_W)) {	m_transform.Rotate(m_cameraUp * CAMERA_SENSITIVTY * _deltaTime); }
+	/*if (m_input.isKeyPressed(SDL_SCANCODE_W)) {	m_transform.Rotate(m_cameraUp * CAMERA_SENSITIVTY * _deltaTime); }
 
 	if (m_input.isKeyPressed(SDL_SCANCODE_S)) { m_transform.Rotate(-m_cameraUp * CAMERA_SENSITIVTY * _deltaTime);}
 
 	if (m_input.isKeyPressed(SDL_SCANCODE_A)) { m_transform.Rotate( m_cameraRight * CAMERA_SENSITIVTY * _deltaTime);}
 
 	if (m_input.isKeyPressed(SDL_SCANCODE_D)) { m_transform.Rotate(-m_cameraRight * CAMERA_SENSITIVTY * _deltaTime);}
-
+*/
 
 
 																									

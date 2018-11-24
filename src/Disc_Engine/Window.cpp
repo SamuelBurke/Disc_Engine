@@ -8,8 +8,8 @@
 
 using namespace Disc_Engine;
 
-int Window::m_width = 1280;
-int Window::m_height = 850;
+int Window::m_width = 920;
+int Window::m_height = 920;
 
 bool Window::InitGL()
 {

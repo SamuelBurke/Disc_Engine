@@ -8,7 +8,6 @@
 #include "Transform.h"
 #include "Camera.h"
 #include "ResourcesHandler.h"
-
 #include "Audio.h"
 
 #endif //DISC_ENGINE_H
