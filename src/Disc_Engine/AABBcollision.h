@@ -12,9 +12,9 @@ class AABBCollision : public Component
 {
 public:
 	void Collide();
+	bool IsColliding(glm::vec3 _a, glm::vec3 _b);
 
 private:
-	bool IsColliding(glm::vec3 _a, glm::vec3 _b);
 
 	bool m_colX;
 	bool m_colY;

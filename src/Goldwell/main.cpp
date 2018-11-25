@@ -16,10 +16,7 @@
 int main()
 {
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
-
 	std::shared_ptr<Disc_Engine::Entity> user = core->AddEntity();
-
-
 	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 	
 	std::shared_ptr<Disc_Engine::Camera> cam = camera->AddComponent<Disc_Engine::Camera>();
@@ -27,11 +24,8 @@ int main()
 
 	std::shared_ptr<Disc_Engine::Transform> transform = user->AddComponent<Disc_Engine::Transform>();
 	std::shared_ptr<Disc_Engine::AABBCollision> collider = user->AddComponent<Disc_Engine::AABBCollision>();
-
 	std::shared_ptr<World> world = user->AddComponent<World>();
-
 	std::shared_ptr<Disc_Engine::MeshRenderer> meshRenderer = user->AddComponent<Disc_Engine::MeshRenderer>();
-
 
 	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/wiimusic.ogg");
 	audio->Play();

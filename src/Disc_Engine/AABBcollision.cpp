@@ -6,13 +6,13 @@ using namespace Disc_Engine;
 
 void AABBCollision::Collide()
 {
-	m_colliding = false;
+	//m_colliding = false;
 
-	if (IsColliding(glm::vec3(0, 0, 0), glm::vec3(0, 0, 0)))
-	{
-		//TODO:::SPAWN APPLES WHEN COLLIDED
-		m_colliding = true;
-	}
+	//if (IsColliding(glm::vec3(0, 0, 0), glm::vec3(0, 0, 0)))
+	//{
+	//	//TODO:::SPAWN APPLES WHEN COLLIDED
+	//	m_colliding = true;
+	//}
 }
 
 bool AABBCollision::IsColliding(glm::vec3 _a, glm::vec3 _b)
@@ -41,7 +41,6 @@ bool AABBCollision::IsColliding(glm::vec3 _a, glm::vec3 _b)
 
 	if (m_colX && m_colY && m_colZ)
 	{
-		std::cout << "collided" << std::endl;
 		return true;
 	}
 	

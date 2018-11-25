@@ -10,9 +10,9 @@ public:
 	void Init();
 	float CalculateDeltaTime();
 
+private:
 	float m_deltaTime = 0;
 	float m_lastTime;
-private:
 	
 };
 

@@ -19,7 +19,9 @@ public:
 	void Init(std::shared_ptr<Disc_Engine::Transform> _transform);
 	void Update(float _deltaTime);
 
-	glm::vec3 GetPosition();
+	void AddSnakePart();
+
+	glm::vec3 GetPlayerPosition();
 
 private:
 	float m_speed;
@@ -29,8 +31,6 @@ private:
 	Disc_Engine::Input m_input;
 
 	std::vector<int> m_playerParts;
-
-
 
 	std::shared_ptr<Disc_Engine::Transform> m_transform;
 	

@@ -10,6 +10,8 @@ class Fruit
 public:
 	void Init(std::shared_ptr<Disc_Engine::Transform> _transform);
 
+	glm::vec3 GetFruitPosition();
+
 	void Update(float _deltaTime);
 	void OnSpawn();
 private:

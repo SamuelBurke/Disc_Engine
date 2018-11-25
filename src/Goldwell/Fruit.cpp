@@ -13,7 +13,7 @@ void Fruit::Init(std::shared_ptr<Disc_Engine::Transform> _transform)
 
 void Fruit::Update(float _deltaTime)
 {
-	OnSpawn();
+	//OnSpawn();
 }
 
 void Fruit::OnSpawn()
@@ -23,4 +23,12 @@ void Fruit::OnSpawn()
 
 	x = rand() % (Disc_Engine::Window::GetWidth() - 2) + 1;
 	y = rand() % (Disc_Engine::Window::GetHeight() - 2) + 1;
+
+	//TODO:::DIVIDE X & Y BY AN OFFSET, SO THE FRUIT REMAINS ON SCREEN
+	m_fruitPos = glm::vec3(x, y, 0.0f);
+}
+
+glm::vec3 Fruit::GetFruitPosition()
+{
+	return m_fruitPos;
 }

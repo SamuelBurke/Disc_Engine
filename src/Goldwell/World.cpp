@@ -25,9 +25,19 @@ void World::OnInit()
 void World::OnTick(float _deltaTime)
 {
 	m_player.Update(_deltaTime);
-	m_fruit.Update(_deltaTime);
+	//m_fruit.Update(_deltaTime);
 
-	m_collider->Collide();
+	glm::vec3 a = GetPlayerPosition();
+	glm::vec3 b = m_fruit.GetFruitPosition();
+
+	if (m_collider->IsColliding(a, b))
+	{
+		m_player.AddSnakePart();
+
+		//m_fruit.OnSpawn();
+		//std::cout << "called" << std::endl;
+	}
+	
 }
 
 std::shared_ptr<Disc_Engine::VertexArray> World::GetModel()
@@ -42,5 +52,5 @@ std::shared_ptr<Disc_Engine::Texture> World::GetTexture()
 
 glm::vec3 World::GetPlayerPosition()
 {
-	return m_player.GetPosition();
+	return m_player.GetPlayerPosition();
 }

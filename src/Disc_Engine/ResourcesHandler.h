@@ -10,8 +10,6 @@
 namespace Disc_Engine
 {
 
-
-
 class ResourcesHandler
 {
 public:
@@ -30,21 +28,9 @@ private:
 	std::vector<std::shared_ptr<Resource>> m_resources;
 };
 
-//
-//template <typename T>
-//inline std::shared_ptr<T> ResourcesHandler::Create()
-//{
-//	std::shared_ptr<T> rtn = std::make_shared<T>();
-//	rtn->Create();
-//
-//	return rtn;
-//}
-
 template<typename T>
 inline std::shared_ptr<T> ResourcesHandler::Load(std::string _filePath)
 {
-	//call load from here? Using template passed through?
-
 	for (size_t i = 0; i < m_resources.size(); i++)
 	{
 		if (m_resources.at(i)->GetFilePath() == _filePath)
@@ -63,27 +49,5 @@ inline std::shared_ptr<T> ResourcesHandler::Load(std::string _filePath)
 
 	return rtn;
 }
-
-
-
-//template<typename T>
-//inline std::shared_ptr<T> ResourcesHandler::GetResource()
-//{
-//	for (size_t i = 0; i < m_resources.size(); i++)
-//	{
-//		std::shared_ptr<T> currentResource = std::dynamic_pointer_cast<T>(m_resources.get_allocator(i));
-//
-//		if (m_resources)
-//		{
-//			return m_resources;
-//		}
-//	}
-//
-//
-//	//std::cout << typeid(T).name() << std::endl;
-//	return nullptr;
-//	throw std::exception();
-//	
-//}
 }
 #endif // !DISC_ENGINE_RESOURCESHANDLER_H

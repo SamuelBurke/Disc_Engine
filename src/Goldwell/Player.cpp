@@ -36,7 +36,14 @@ void Player::Update(float _deltaTime)
 	//m_transform->Translate(m_direction * m_speed * _deltaTime);
 }
 
-glm::vec3 Player::GetPosition()
+void Player::AddSnakePart()
+{
+	m_playerParts.push_back(1);
+	//TODO:::ADD ANOTHER CUBE COMPONENT TO THE VECTOR OF PLAYER PARTS
+	//STD::VECTOR<INT> IS TEMPORARY
+}
+
+glm::vec3 Player::GetPlayerPosition()
 {
 	return m_transform->GetPosition();
 }
