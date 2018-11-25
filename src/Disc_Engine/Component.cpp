@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "ResourcesHandler.h"
 #include "Transform.h"
+#include "AABBcollision.h"
 
 #include <iostream>
 
@@ -42,6 +43,11 @@ std::shared_ptr<Core> Component::GetCore()
 std::shared_ptr<Transform> Component::GetTransform()
 {
 	return GetEntity()->GetComponent<Transform>();
+}
+
+std::shared_ptr<AABBCollision> Component::GetCollider()
+{
+	return GetEntity()->GetComponent<AABBCollision>();
 }
 
 std::shared_ptr<ResourcesHandler> Component::GetResourcesHandler()

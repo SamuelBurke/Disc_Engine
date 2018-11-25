@@ -9,21 +9,6 @@ void Transform::OnInit()
 	m_scale = glm::vec3(1, 1, 1);
 }
 
-void Transform::OnDisplay()
-{
-	//std::cout << "Transform::OnDisplay called" << std::endl;
-}
-
-void Transform::OnTick(float _deltaTime)
-{
-	/*std::cout << "Position: " << m_position.x << m_position.y << m_position.z << std::endl;
-	std::cout << "Rotation: " << m_rotation.x << m_rotation.y << m_rotation.z << std::endl;
-	std::cout << "Scale: " << m_scale.x << m_scale.y << m_scale.z << std::endl;*/
-
-
-	//m_transform = m_position * m_rotation * m_scale;
-}
-
 void Transform::Translate(glm::vec3 _value)
 {
 	m_position += _value;
@@ -31,13 +16,7 @@ void Transform::Translate(glm::vec3 _value)
 
 void Transform::Rotate(glm::vec3 _value)
 {
-	//glm::rotate(glm::mat4(1), glm::radians(90.0f), glm::vec3(_value));
-
 	m_rotation += _value;
-
-	//m_rotation.x += _value.x;
-	//m_rotation.y += _value.y;
-	//m_rotation.z += _value.z;
 }
 
 void Transform::Scale(glm::vec3 _value)
@@ -74,8 +53,3 @@ glm::vec3 Transform::GetScale()
 {
 	return m_scale;
 }
-
-//glm::vec3 Transform::GetTransform()
-//{
-//	return m_transform;
-//}

@@ -44,6 +44,8 @@ add_executable(Goldwell
  src/Goldwell/Player.cpp
  src/Goldwell/World.h
  src/Goldwell/World.cpp
+ src/Goldwell/Fruit.h
+ src/Goldwell/Fruit.cpp
  )
 
 add_library(Disc_Engine
@@ -63,6 +65,7 @@ add_library(Disc_Engine
  src/Disc_Engine/MeshRenderer.h
  src/Disc_Engine/Transform.h
  src/Disc_Engine/Camera.h
+ src/Disc_Engine/AABBcollision.h
  
  src/Disc_Engine/ResourcesHandler.h
  src/Disc_Engine/Resource.h
@@ -85,6 +88,7 @@ add_library(Disc_Engine
  src/Disc_Engine/MeshRenderer.cpp
  src/Disc_Engine/Transform.cpp
  src/Disc_Engine/Camera.cpp
+  src/Disc_Engine/AABBcollision.cpp
 
  src/Disc_Engine/Texture.cpp
  src/Disc_Engine/Shader.cpp

@@ -9,6 +9,7 @@ class Entity;
 class Core;
 class ResourcesHandler;
 class Transform;
+class AABBCollision;
 
 class Component
 {
@@ -22,6 +23,8 @@ public:
 	static std::shared_ptr<ResourcesHandler> GetResourcesHandler();
 
 	std::shared_ptr<Transform> GetTransform();
+
+	std::shared_ptr<AABBCollision> GetCollider();
 
 private:
 	std::weak_ptr<Entity> m_entity;

@@ -18,6 +18,9 @@ void MeshRenderer::OnInit()
 
 	m_shader = std::make_shared<Shader>("../resources/shaders/shader.vert", "../resources/shaders/shader.frag");
 
+	SetMesh(GetCore()->GetComponent<World>()->GetModel());
+	SetMaterial(GetCore()->GetComponent<World>()->GetTexture());
+
 	m_shader->SetUniform("in_Projection", GetCore()->GetComponent<Camera>()->GetProjection());
 }
 
@@ -28,31 +31,35 @@ void MeshRenderer::OnTick(float _deltaTime)
 	m_angle += 100.0f * _deltaTime;
 }
 
-
 void MeshRenderer::OnDisplay()
 {
 	glm::mat4 cube(1.0f);
 
-	glm::vec3 cubePos = GetCore()->GetComponent<Transform>()->GetPosition();
+	glm::vec3 cubePos = GetCore()->GetComponent<World>()->GetPlayerPosition();
 	cube = glm::translate(cube, cubePos);
 
 	m_shader->SetUniform("in_Model", cube);
-	m_shader->SetUniform("in_Texture", GetCore()->GetComponent<World>()->GetTexture());
+	m_shader->SetUniform("in_Texture", m_currentTexture.lock());
 
-	m_shader->Draw(*GetCore()->GetComponent<World>()->GetModel());
+	m_shader->Draw(*m_currentMesh.lock());
+}
 
+void MeshRenderer::SetMesh(std::weak_ptr<VertexArray> _mesh)
+{
+	m_currentMesh = _mesh;
+}
 
+std::shared_ptr<VertexArray> MeshRenderer::GetMesh()
+{
+	return m_currentMesh.lock();
+}
 
-	//glm::mat4 map(1.0f);
-	//glm::vec3 mapPos = GetCore()->GetComponent<Transform>()->GetPosition();
-	//map = glm::translate(map, mapPos);
+void MeshRenderer::SetMaterial(std::weak_ptr<Texture> _texture)
+{
+	m_currentTexture = _texture;
+}
 
-	//glm::vec3 mapRot = GetCore()->GetComponent<Transform>()->GetRotation();
-	//map = glm::rotate(map, glm::radians(90.0f), mapRot);
-
-	//m_shader->SetUniform("in_Model", map);
-	//m_shader->SetUniform("in_Texture", GetCore()->GetComponent<World>()->GetTexture());
-
-	//m_shader->Draw(*GetCore()->GetComponent<World>()->GetModel());
-
+std::shared_ptr<Texture> MeshRenderer::GetMaterial()
+{
+	return m_currentTexture.lock();
 }

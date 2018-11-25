@@ -9,5 +9,6 @@
 #include "Camera.h"
 #include "ResourcesHandler.h"
 #include "Audio.h"
+#include "AABBcollision.h"
 
 #endif //DISC_ENGINE_H

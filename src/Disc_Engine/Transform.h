@@ -27,20 +27,11 @@ public:
 	glm::vec3 GetRotation();
 	glm::vec3 GetScale();
 
-	//glm::vec3 GetTransform();
-
 private:
-	void OnTick(float _deltaTime);
-	void OnDisplay();
 
 	glm::vec3 m_position;
 	glm::vec3 m_rotation;
 	glm::vec3 m_scale;
-
-	//glm::vec3 m_transform;
-
-	//TESTING\\
-	
 
 };
 

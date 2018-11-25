@@ -18,27 +18,23 @@ int main()
 	std::shared_ptr<Disc_Engine::Core> core = Disc_Engine::Core::Init(); //call the initialsation of core.
 
 	std::shared_ptr<Disc_Engine::Entity> user = core->AddEntity();
+
+
 	std::shared_ptr<Disc_Engine::Entity> camera = core->AddEntity();
 	
 	std::shared_ptr<Disc_Engine::Camera> cam = camera->AddComponent<Disc_Engine::Camera>();
 	std::shared_ptr<Disc_Engine::Transform> trans = camera->AddComponent<Disc_Engine::Transform>();
 
 	std::shared_ptr<Disc_Engine::Transform> transform = user->AddComponent<Disc_Engine::Transform>();
+	std::shared_ptr<Disc_Engine::AABBCollision> collider = user->AddComponent<Disc_Engine::AABBCollision>();
 
 	std::shared_ptr<World> world = user->AddComponent<World>();
 
 	std::shared_ptr<Disc_Engine::MeshRenderer> meshRenderer = user->AddComponent<Disc_Engine::MeshRenderer>();
 
 
-	
-	//std::shared_ptr<Disc_Engine::ResourcesHandler> resource;
-	//std::shared_ptr<Disc_Engine::Shader> shader = resource->Create<Disc_Engine::Shader>();
-	//std::shared_ptr<Disc_Engine::Shader> shader = Disc_Engine::Component::GetResourcesHandler()->Load
-
-	//std::shared_ptr<Disc_Engine::Texture> texture = Disc_Engine::Component::GetResourcesHandler()->Load<Disc_Engine::Texture>("../resources/textures/default.png");
-
-	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/dixie_horn.ogg");
-	//audio->Play();
+	std::shared_ptr<Disc_Engine::Audio> audio = std::make_shared<Disc_Engine::Audio>("../resources/audio/wiimusic.ogg");
+	audio->Play();
 
 	core->Begin(); //begin the core of the engine.
 

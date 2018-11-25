@@ -3,34 +3,44 @@
 #include "Disc_Engine/Core.h"
 #include "Disc_Engine/VertexArray.h"
 #include "Disc_Engine/Texture.h"
+#include "Disc_Engine/AABBcollision.h"
 
 #include <iostream>
 
 void World::OnInit()
 {
-	m_map = std::make_shared<Disc_Engine::VertexArray>("../resources/models/map.obj");
-	m_mapTexture = std::make_shared<Disc_Engine::Texture>("../resources/textures/default.png");
-
 	m_transform = GetTransform();
-	//GetCore()->GetComponent<Disc_Engine::Transform>()->SetPosition(glm::vec3(0.0f, 0.0f, -10.0f));
+	m_collider = GetCollider();
+	//m_map = std::make_shared<Disc_Engine::VertexArray>("../resources/models/map.obj");
+	//m_mapTexture = std::make_shared<Disc_Engine::Texture>("../resources/textures/default.png");
 
+	//TODO:::Move To Resources Handler
+	m_debugCube = std::make_shared<Disc_Engine::VertexArray>("../resources/models/cube.obj");
+	m_defaultTexture = std::make_shared<Disc_Engine::Texture>("../resources/textures/default.png");
+	
 	m_player.Init(m_transform);
-
+	m_fruit.Init(m_transform);
 }
 
 void World::OnTick(float _deltaTime)
 {
 	m_player.Update(_deltaTime);
+	m_fruit.Update(_deltaTime);
 
-	//m_transform->Translate(glm::vec3(1.0f, 0.0f, 0.0f) * _deltaTime);
+	m_collider->Collide();
 }
 
 std::shared_ptr<Disc_Engine::VertexArray> World::GetModel()
 {
-	return m_player.GetModel();
+	return m_debugCube;
 }
 
 std::shared_ptr<Disc_Engine::Texture> World::GetTexture()
 {
-	return m_player.GetTexture();
+	return m_defaultTexture;
+}
+
+glm::vec3 World::GetPlayerPosition()
+{
+	return m_player.GetPosition();
 }

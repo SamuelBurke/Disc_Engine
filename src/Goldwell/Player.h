@@ -19,24 +19,17 @@ public:
 	void Init(std::shared_ptr<Disc_Engine::Transform> _transform);
 	void Update(float _deltaTime);
 
-	std::shared_ptr<Disc_Engine::Texture> GetTexture();
-	std::shared_ptr<Disc_Engine::VertexArray> GetModel();
+	glm::vec3 GetPosition();
 
 private:
 	float m_speed;
 	glm::vec3 m_direction;
-
-	//float m_angle;
+	glm::vec3 m_playerPos;
 
 	Disc_Engine::Input m_input;
 
-	//TESTING\\	
-	std::shared_ptr<Disc_Engine::VertexArray> m_debugCube;
-	std::shared_ptr<Disc_Engine::Texture> m_defaultTexture;
-
-
-
 	std::vector<int> m_playerParts;
+
 
 
 	std::shared_ptr<Disc_Engine::Transform> m_transform;
