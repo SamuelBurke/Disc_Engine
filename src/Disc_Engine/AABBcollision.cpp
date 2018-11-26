@@ -21,6 +21,12 @@ bool AABBCollision::IsColliding(glm::vec3 _a, glm::vec3 _b)
 	m_colY = false;
 	m_colZ = false;
 
+	//if (_a.x = _b.x) { m_colX = true; }
+	//if (_a.y = _b.y) { m_colY = true; }
+	//if (_a.z = _b.z) { m_colZ = true; }
+
+	//if (m_colX && m_colY && m_colZ) { return true; }
+
 	if (_a.x < _b.x)
 	{
 		if (_a.x + 2 > _b.x - 1) { m_colX = true; } // 2 & 1 are offset values, so the collision is not pixel perfect.

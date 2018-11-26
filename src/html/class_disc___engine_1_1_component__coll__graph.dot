@@ -1,0 +1,6 @@
+digraph "Disc_Engine::Component"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node6 [label="{Disc_Engine::Component\n|- m_entity\l- m_began\l|+ ~Component()\l+ GetCore()\l+ GetEntity()\l+ GetTransform()\l+ GetCollider()\l+ GetResourcesHandler()\l- OnInit()\l- OnBegin()\l- OnTick()\l- OnDisplay()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

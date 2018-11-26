@@ -1,0 +1,137 @@
+\hypertarget{class_disc___engine_1_1_entity}{}\section{Disc\+\_\+\+Engine\+:\+:Entity Class Reference}
+\label{class_disc___engine_1_1_entity}\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+
+
+Collaboration diagram for Disc\+\_\+\+Engine\+:\+:Entity\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_a624aeeec279e9e8240d47c3c892e01e3}{Get\+Component}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_ace00927f41d6171967ad0995ecb7d7cf}{Add\+Component}} ()
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_aa5629b9b1fe8d7e3def0eb3beaf6354c}{Add\+Component}} (A \+\_\+a)
+\item 
+{\footnotesize template$<$typename T , typename A , typename B $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_abd045796acccdfac53383b50f3020129}{Add\+Component}} (A \+\_\+a, B \+\_\+b)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_core}{Core}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_aca8a5ff6e980db6f834d841a73dfbf89}{Get\+Core}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_entity_a5c21de8049a0b5aa7dce577f322338d7}{Tick}} (float \+\_\+delta\+Time)
+\begin{DoxyCompactList}\small\item\em Function to be called every frame. Updates every entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_entity_a72ab24c9e9ed682c7052e83cac5ca4dd}{Display}} ()
+\begin{DoxyCompactList}\small\item\em Function to be called after everything has been updated as is ready to display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_a16f73c84e8928aab5fade057de148a27}{m\+\_\+components}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_a23c18419f498492049914ce84bac9c1e}{m\+\_\+self}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_core}{Core}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_entity_a5b1eae1a1711ee920d756812c6eb4ba6}{m\+\_\+core}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_disc___engine_1_1_entity_a4107254ac74f90d4f91e810d755b98c2}{Core}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_ace00927f41d6171967ad0995ecb7d7cf}\label{class_disc___engine_1_1_entity_ace00927f41d6171967ad0995ecb7d7cf}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Add\+Component@{Add\+Component}}
+\index{Add\+Component@{Add\+Component}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Add\+Component()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Disc\+\_\+\+Engine\+::\+Entity\+::\+Add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_aa5629b9b1fe8d7e3def0eb3beaf6354c}\label{class_disc___engine_1_1_entity_aa5629b9b1fe8d7e3def0eb3beaf6354c}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Add\+Component@{Add\+Component}}
+\index{Add\+Component@{Add\+Component}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Add\+Component()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename A $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Disc\+\_\+\+Engine\+::\+Entity\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{A}]{\+\_\+a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_abd045796acccdfac53383b50f3020129}\label{class_disc___engine_1_1_entity_abd045796acccdfac53383b50f3020129}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Add\+Component@{Add\+Component}}
+\index{Add\+Component@{Add\+Component}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Add\+Component()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename A , typename B $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Disc\+\_\+\+Engine\+::\+Entity\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{A}]{\+\_\+a,  }\item[{B}]{\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_a72ab24c9e9ed682c7052e83cac5ca4dd}\label{class_disc___engine_1_1_entity_a72ab24c9e9ed682c7052e83cac5ca4dd}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Display@{Display}}
+\index{Display@{Display}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Display()}{Display()}}
+{\footnotesize\ttfamily void Entity\+::\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to be called after everything has been updated as is ready to display. 
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_a624aeeec279e9e8240d47c3c892e01e3}\label{class_disc___engine_1_1_entity_a624aeeec279e9e8240d47c3c892e01e3}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Get\+Component@{Get\+Component}}
+\index{Get\+Component@{Get\+Component}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Get\+Component()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Disc\+\_\+\+Engine\+::\+Entity\+::\+Get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_aca8a5ff6e980db6f834d841a73dfbf89}\label{class_disc___engine_1_1_entity_aca8a5ff6e980db6f834d841a73dfbf89}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Get\+Core@{Get\+Core}}
+\index{Get\+Core@{Get\+Core}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Get\+Core()}{GetCore()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_core}{Core}} $>$ Entity\+::\+Get\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_a5c21de8049a0b5aa7dce577f322338d7}\label{class_disc___engine_1_1_entity_a5c21de8049a0b5aa7dce577f322338d7}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Tick@{Tick}}
+\index{Tick@{Tick}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Entity\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{\+\_\+delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to be called every frame. Updates every entity. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_a4107254ac74f90d4f91e810d755b98c2}\label{class_disc___engine_1_1_entity_a4107254ac74f90d4f91e810d755b98c2}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!Core@{Core}}
+\index{Core@{Core}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{Core}{Core}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_disc___engine_1_1_core}{Core}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_a16f73c84e8928aab5fade057de148a27}\label{class_disc___engine_1_1_entity_a16f73c84e8928aab5fade057de148a27}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!m\+\_\+components@{m\+\_\+components}}
+\index{m\+\_\+components@{m\+\_\+components}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+components}{m\_components}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_component}{Component}}$>$ $>$ Disc\+\_\+\+Engine\+::\+Entity\+::m\+\_\+components\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_a5b1eae1a1711ee920d756812c6eb4ba6}\label{class_disc___engine_1_1_entity_a5b1eae1a1711ee920d756812c6eb4ba6}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!m\+\_\+core@{m\+\_\+core}}
+\index{m\+\_\+core@{m\+\_\+core}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+core}{m\_core}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_core}{Core}}$>$ Disc\+\_\+\+Engine\+::\+Entity\+::m\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_entity_a23c18419f498492049914ce84bac9c1e}\label{class_disc___engine_1_1_entity_a23c18419f498492049914ce84bac9c1e}} 
+\index{Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}!m\+\_\+self@{m\+\_\+self}}
+\index{m\+\_\+self@{m\+\_\+self}!Disc\+\_\+\+Engine\+::\+Entity@{Disc\+\_\+\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+self}{m\_self}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_entity}{Entity}}$>$ Disc\+\_\+\+Engine\+::\+Entity\+::m\+\_\+self\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Disc\+\_\+\+Engine/\mbox{\hyperlink{_entity_8h}{Entity.\+h}}\item 
+Disc\+\_\+\+Engine/\mbox{\hyperlink{_entity_8cpp}{Entity.\+cpp}}\end{DoxyCompactItemize}

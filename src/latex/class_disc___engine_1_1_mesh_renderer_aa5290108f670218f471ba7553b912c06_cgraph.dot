@@ -1,0 +1,11 @@
+digraph "Disc_Engine::MeshRenderer::OnTick"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14 [label="Disc_Engine::MeshRenderer\l::OnTick",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Disc_Engine::Component\l::GetCore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html#a601ec93559ca1dd75c2c1ea13510594d"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="Disc_Engine::Component\l::GetEntity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html#a746298ddfd39da5b191926aa8d8f6d95"];
+}

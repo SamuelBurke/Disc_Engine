@@ -1,0 +1,12 @@
+digraph "Disc_Engine/ResourcesHandler.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node6 [label="Disc_Engine/ResourcesHandler.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Disc_Engine/Component.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_component_8cpp.html"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Disc_Engine/Disc_Engine.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_disc___engine_8h.html"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Goldwell/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+}

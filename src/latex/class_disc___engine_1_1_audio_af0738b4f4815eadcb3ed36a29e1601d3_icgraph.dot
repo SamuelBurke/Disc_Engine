@@ -1,0 +1,9 @@
+digraph "Disc_Engine::Audio::Load"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="Disc_Engine::Audio\l::Load",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Disc_Engine::Audio\l::Audio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_audio.html#a7cdcc0906dc012d6db0413a474b77688"];
+}

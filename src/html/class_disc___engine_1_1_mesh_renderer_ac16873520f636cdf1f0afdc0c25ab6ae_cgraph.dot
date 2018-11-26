@@ -1,0 +1,15 @@
+digraph "Disc_Engine::MeshRenderer::OnInit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8 [label="Disc_Engine::MeshRenderer\l::OnInit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Disc_Engine::MeshRenderer\l::SetMesh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_mesh_renderer.html#ab40ea6de71fb6f9ef7e40348ea13de5b"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Disc_Engine::Component\l::GetCore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html#a601ec93559ca1dd75c2c1ea13510594d"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Disc_Engine::Component\l::GetEntity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html#a746298ddfd39da5b191926aa8d8f6d95"];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Disc_Engine::MeshRenderer\l::SetMaterial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_mesh_renderer.html#ab6080999b90175c224b4590fabba3da2"];
+}

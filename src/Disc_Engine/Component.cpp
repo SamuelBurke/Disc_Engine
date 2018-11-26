@@ -14,7 +14,6 @@ Component::~Component()
 
 void Component::OnInit()
 {
-
 }
 
 void Component::OnBegin()

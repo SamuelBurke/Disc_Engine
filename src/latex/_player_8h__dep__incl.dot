@@ -1,0 +1,28 @@
+digraph "Goldwell/Player.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node19 [label="Goldwell/Player.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="Goldwell/World.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_world_8h.html"];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="Disc_Engine/Core.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_core_8h.html"];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="Disc_Engine/Camera.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_camera_8cpp.html"];
+  Node21 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node23 [label="Disc_Engine/Core.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_core_8cpp.html"];
+  Node21 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 [label="Disc_Engine/Disc_Engine.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_disc___engine_8h.html"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node25 [label="Goldwell/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node21 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node26 [label="Disc_Engine/MeshRenderer.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_mesh_renderer_8cpp.html"];
+  Node21 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node27 [label="Goldwell/Player.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_8cpp.html"];
+  Node21 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node28 [label="Goldwell/World.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_world_8cpp.html"];
+  Node20 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

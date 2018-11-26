@@ -1,0 +1,11 @@
+digraph "Fruit::OnSpawn"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6 [label="Fruit::OnSpawn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Disc_Engine::Window\l::GetWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_window.html#ac3ff975d1f881d7806656f01d1abad83"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Disc_Engine::Window\l::GetHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_window.html#aa234876b2ba5d3538b717e66c5ccbc5c"];
+}

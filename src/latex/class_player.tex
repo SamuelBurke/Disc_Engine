@@ -1,0 +1,118 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Collaboration diagram for Player\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_a27da2c33057c830285cb9727fe76d935}{Init}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_transform}{Disc\+\_\+\+Engine\+::\+Transform}} $>$ \+\_\+transform)
+\item 
+void \mbox{\hyperlink{class_player_ac6cfd11d9908832675a20967951ba72f}{Update}} (float \+\_\+delta\+Time)
+\item 
+void \mbox{\hyperlink{class_player_a58bb36e752a92fd5758900e49cdab663}{Add\+Snake\+Part}} ()
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_player_a3c32ec6529ebd0e72bd286f80f01ebea}{Get\+Player\+Position}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_ac872b310930295033b218f1551a27e34}{m\+\_\+speed}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_player_aa40fff5ae7b3c916b7e2f8702e18165a}{m\+\_\+direction}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_player_a3e452f529d00cfbb48cfd2d7b31bd3e7}{m\+\_\+player\+Pos}}
+\item 
+\mbox{\hyperlink{class_disc___engine_1_1_input}{Disc\+\_\+\+Engine\+::\+Input}} \mbox{\hyperlink{class_player_a14938c76d5d02878d37cb55188bd153f}{m\+\_\+input}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_player_afa409f38614a07bf775127cd5aa23e55}{m\+\_\+player\+Parts}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_transform}{Disc\+\_\+\+Engine\+::\+Transform}} $>$ \mbox{\hyperlink{class_player_a142e036a5be744cf38af08b56f1bf17b}{m\+\_\+transform}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a58bb36e752a92fd5758900e49cdab663}\label{class_player_a58bb36e752a92fd5758900e49cdab663}} 
+\index{Player@{Player}!Add\+Snake\+Part@{Add\+Snake\+Part}}
+\index{Add\+Snake\+Part@{Add\+Snake\+Part}!Player@{Player}}
+\subsubsection{\texorpdfstring{Add\+Snake\+Part()}{AddSnakePart()}}
+{\footnotesize\ttfamily void Player\+::\+Add\+Snake\+Part (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_player_a3c32ec6529ebd0e72bd286f80f01ebea}\label{class_player_a3c32ec6529ebd0e72bd286f80f01ebea}} 
+\index{Player@{Player}!Get\+Player\+Position@{Get\+Player\+Position}}
+\index{Get\+Player\+Position@{Get\+Player\+Position}!Player@{Player}}
+\subsubsection{\texorpdfstring{Get\+Player\+Position()}{GetPlayerPosition()}}
+{\footnotesize\ttfamily glm\+::vec3 Player\+::\+Get\+Player\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_player_a27da2c33057c830285cb9727fe76d935}\label{class_player_a27da2c33057c830285cb9727fe76d935}} 
+\index{Player@{Player}!Init@{Init}}
+\index{Init@{Init}!Player@{Player}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Player\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_transform}{Disc\+\_\+\+Engine\+::\+Transform}} $>$}]{\+\_\+transform }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_player_ac6cfd11d9908832675a20967951ba72f}\label{class_player_ac6cfd11d9908832675a20967951ba72f}} 
+\index{Player@{Player}!Update@{Update}}
+\index{Update@{Update}!Player@{Player}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{\+\_\+delta\+Time }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_aa40fff5ae7b3c916b7e2f8702e18165a}\label{class_player_aa40fff5ae7b3c916b7e2f8702e18165a}} 
+\index{Player@{Player}!m\+\_\+direction@{m\+\_\+direction}}
+\index{m\+\_\+direction@{m\+\_\+direction}!Player@{Player}}
+\subsubsection{\texorpdfstring{m\+\_\+direction}{m\_direction}}
+{\footnotesize\ttfamily glm\+::vec3 Player\+::m\+\_\+direction\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a14938c76d5d02878d37cb55188bd153f}\label{class_player_a14938c76d5d02878d37cb55188bd153f}} 
+\index{Player@{Player}!m\+\_\+input@{m\+\_\+input}}
+\index{m\+\_\+input@{m\+\_\+input}!Player@{Player}}
+\subsubsection{\texorpdfstring{m\+\_\+input}{m\_input}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_disc___engine_1_1_input}{Disc\+\_\+\+Engine\+::\+Input}} Player\+::m\+\_\+input\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_afa409f38614a07bf775127cd5aa23e55}\label{class_player_afa409f38614a07bf775127cd5aa23e55}} 
+\index{Player@{Player}!m\+\_\+player\+Parts@{m\+\_\+player\+Parts}}
+\index{m\+\_\+player\+Parts@{m\+\_\+player\+Parts}!Player@{Player}}
+\subsubsection{\texorpdfstring{m\+\_\+player\+Parts}{m\_playerParts}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Player\+::m\+\_\+player\+Parts\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a3e452f529d00cfbb48cfd2d7b31bd3e7}\label{class_player_a3e452f529d00cfbb48cfd2d7b31bd3e7}} 
+\index{Player@{Player}!m\+\_\+player\+Pos@{m\+\_\+player\+Pos}}
+\index{m\+\_\+player\+Pos@{m\+\_\+player\+Pos}!Player@{Player}}
+\subsubsection{\texorpdfstring{m\+\_\+player\+Pos}{m\_playerPos}}
+{\footnotesize\ttfamily glm\+::vec3 Player\+::m\+\_\+player\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_ac872b310930295033b218f1551a27e34}\label{class_player_ac872b310930295033b218f1551a27e34}} 
+\index{Player@{Player}!m\+\_\+speed@{m\+\_\+speed}}
+\index{m\+\_\+speed@{m\+\_\+speed}!Player@{Player}}
+\subsubsection{\texorpdfstring{m\+\_\+speed}{m\_speed}}
+{\footnotesize\ttfamily float Player\+::m\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a142e036a5be744cf38af08b56f1bf17b}\label{class_player_a142e036a5be744cf38af08b56f1bf17b}} 
+\index{Player@{Player}!m\+\_\+transform@{m\+\_\+transform}}
+\index{m\+\_\+transform@{m\+\_\+transform}!Player@{Player}}
+\subsubsection{\texorpdfstring{m\+\_\+transform}{m\_transform}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_transform}{Disc\+\_\+\+Engine\+::\+Transform}}$>$ Player\+::m\+\_\+transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Goldwell/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+Goldwell/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

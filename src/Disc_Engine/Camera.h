@@ -15,20 +15,20 @@
 namespace Disc_Engine
 {
 
-class Camera : public Component
+class Camera : public Component // Camera inherits from Component, attached to its own Entity.
 {
 public:
-	void OnInit();
-	void OnTick(float _deltaTime);
+	void OnInit(); // Overrides the virtual function in Component.
+	void OnTick(float _deltaTime); // Overrides the virtual function in Component.
 
-	glm::mat4 GetProjection();
-	glm::mat4 GetView();
+	glm::mat4 GetProjection(); // Returns the projection matrix.
+	glm::mat4 GetView(); // Returns the view matrix.
 
 private:
 	glm::mat4 m_projectionMatrix;
 	glm::mat4 m_viewMatrix;
 	
-	float m_radius;
+	float m_radius; // Variables for the projection matrix.
 	float m_near;
 	float m_far;
 

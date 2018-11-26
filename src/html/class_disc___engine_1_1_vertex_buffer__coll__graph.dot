@@ -1,0 +1,6 @@
+digraph "Disc_Engine::VertexBuffer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Disc_Engine::VertexBuffer\n|- m_id\l- m_components\l- m_data\l- m_dirty\l|+ VertexBuffer()\l+ Add()\l+ Add()\l+ Add()\l+ GetComponents()\l+ GetDataSize()\l+ GetID()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

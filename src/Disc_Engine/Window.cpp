@@ -23,13 +23,6 @@ bool Window::InitGL()
 		return false;
 	}
 
-	std::cout << "[INFO]: Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
-
-	std::cout << "[INFO]: OpenGL Vendor: " << glGetString(GL_VENDOR) << std::endl;
-	std::cout << "[INFO]: OpenGL Renderer: " << glGetString(GL_RENDERER) << std::endl;
-	std::cout << "[INFO]: OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
-	std::cout << "[INFO]: OpenGL Shading Language Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
-
 	return true;
 }
 

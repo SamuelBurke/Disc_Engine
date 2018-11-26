@@ -1,0 +1,33 @@
+digraph "Disc_Engine/Shader.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node9 [label="Disc_Engine/Shader.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Goldwell/Player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_8h.html"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Goldwell/World.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_world_8h.html"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Disc_Engine/Core.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_core_8h.html"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Disc_Engine/Camera.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_camera_8cpp.html"];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Disc_Engine/Core.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_core_8cpp.html"];
+  Node12 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Disc_Engine/Disc_Engine.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_disc___engine_8h.html"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Goldwell/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node12 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Disc_Engine/MeshRenderer.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_mesh_renderer_8cpp.html"];
+  Node12 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Goldwell/Player.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_8cpp.html"];
+  Node12 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Goldwell/World.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_world_8cpp.html"];
+  Node11 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="Disc_Engine/Shader.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_shader_8cpp.html"];
+}

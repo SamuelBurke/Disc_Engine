@@ -11,7 +11,7 @@
 namespace Disc_Engine
 {
 
-class Transform : public Component
+class Transform : public Component // Inherits from component, attached to anything that needs to move or rotate.
 {
 public:
 	void OnInit();

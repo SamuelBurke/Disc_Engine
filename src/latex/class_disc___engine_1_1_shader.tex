@@ -1,0 +1,109 @@
+\hypertarget{class_disc___engine_1_1_shader}{}\section{Disc\+\_\+\+Engine\+:\+:Shader Class Reference}
+\label{class_disc___engine_1_1_shader}\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+
+
+Inheritance diagram for Disc\+\_\+\+Engine\+:\+:Shader\+:
+% FIG 0
+
+
+Collaboration diagram for Disc\+\_\+\+Engine\+:\+:Shader\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_disc___engine_1_1_shader_a992a94b53b626149a64d4b83988f59d3}{Shader}} (std\+::string \+\_\+vertex, std\+::string \+\_\+fragment)
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_shader_a8325d8ee791234cfb6caa333b5384695}{Draw}} (\mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}} \&\+\_\+vertex\+Array)
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_shader_a6b06fcd4b111d0d37d53ee64ae72ad2b}{Set\+Uniform}} (std\+::string \+\_\+uniform, glm\+::vec4 \+\_\+value)
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_shader_aaef99a497e0dafa54963722c2b83c870}{Set\+Uniform}} (std\+::string \+\_\+uniform, float \+\_\+value)
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_shader_a129891a7f878122fe56357b16d5f6b1c}{Set\+Uniform}} (std\+::string \+\_\+uniform, glm\+::mat4 \+\_\+value)
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_shader_a479f29b49b7e1a7326995415c3175c3a}{Set\+Uniform}} (std\+::string \+\_\+uniform, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}} $>$ \+\_\+texture)
+\item 
+G\+Luint \mbox{\hyperlink{class_disc___engine_1_1_shader_ac77c9f2dc144eeb40c6c07182d69c308}{Get\+ID}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{class_disc___engine_1_1_shader_aada3554645b154451f9da5f7683ab6ef}{m\+\_\+id}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_disc___engine_1_1_sampler}{Sampler}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_shader_a63a34fc1f35b70acfcf2d8113d2bf29c}{m\+\_\+samplers}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_a992a94b53b626149a64d4b83988f59d3}\label{class_disc___engine_1_1_shader_a992a94b53b626149a64d4b83988f59d3}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+vertex,  }\item[{std\+::string}]{\+\_\+fragment }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_a8325d8ee791234cfb6caa333b5384695}\label{class_disc___engine_1_1_shader_a8325d8ee791234cfb6caa333b5384695}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!Draw@{Draw}}
+\index{Draw@{Draw}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Shader\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}} \&}]{\+\_\+vertex\+Array }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_ac77c9f2dc144eeb40c6c07182d69c308}\label{class_disc___engine_1_1_shader_ac77c9f2dc144eeb40c6c07182d69c308}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!Get\+ID@{Get\+ID}}
+\index{Get\+ID@{Get\+ID}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{Get\+I\+D()}{GetID()}}
+{\footnotesize\ttfamily G\+Luint Shader\+::\+Get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_a6b06fcd4b111d0d37d53ee64ae72ad2b}\label{class_disc___engine_1_1_shader_a6b06fcd4b111d0d37d53ee64ae72ad2b}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!Set\+Uniform@{Set\+Uniform}}
+\index{Set\+Uniform@{Set\+Uniform}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{Set\+Uniform()}{SetUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Shader\+::\+Set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+uniform,  }\item[{glm\+::vec4}]{\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_aaef99a497e0dafa54963722c2b83c870}\label{class_disc___engine_1_1_shader_aaef99a497e0dafa54963722c2b83c870}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!Set\+Uniform@{Set\+Uniform}}
+\index{Set\+Uniform@{Set\+Uniform}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{Set\+Uniform()}{SetUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Shader\+::\+Set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+uniform,  }\item[{float}]{\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_a129891a7f878122fe56357b16d5f6b1c}\label{class_disc___engine_1_1_shader_a129891a7f878122fe56357b16d5f6b1c}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!Set\+Uniform@{Set\+Uniform}}
+\index{Set\+Uniform@{Set\+Uniform}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{Set\+Uniform()}{SetUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Shader\+::\+Set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+uniform,  }\item[{glm\+::mat4}]{\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_a479f29b49b7e1a7326995415c3175c3a}\label{class_disc___engine_1_1_shader_a479f29b49b7e1a7326995415c3175c3a}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!Set\+Uniform@{Set\+Uniform}}
+\index{Set\+Uniform@{Set\+Uniform}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{Set\+Uniform()}{SetUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Shader\+::\+Set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+uniform,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}} $>$}]{\+\_\+texture }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_aada3554645b154451f9da5f7683ab6ef}\label{class_disc___engine_1_1_shader_aada3554645b154451f9da5f7683ab6ef}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!m\+\_\+id@{m\+\_\+id}}
+\index{m\+\_\+id@{m\+\_\+id}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+id}{m\_id}}
+{\footnotesize\ttfamily G\+Luint Disc\+\_\+\+Engine\+::\+Shader\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_shader_a63a34fc1f35b70acfcf2d8113d2bf29c}\label{class_disc___engine_1_1_shader_a63a34fc1f35b70acfcf2d8113d2bf29c}} 
+\index{Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}!m\+\_\+samplers@{m\+\_\+samplers}}
+\index{m\+\_\+samplers@{m\+\_\+samplers}!Disc\+\_\+\+Engine\+::\+Shader@{Disc\+\_\+\+Engine\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+samplers}{m\_samplers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_disc___engine_1_1_sampler}{Sampler}}$>$ Disc\+\_\+\+Engine\+::\+Shader\+::m\+\_\+samplers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Disc\+\_\+\+Engine/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+Disc\+\_\+\+Engine/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

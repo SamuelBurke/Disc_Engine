@@ -1,0 +1,16 @@
+digraph "Disc_Engine::Component"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{Disc_Engine::Component\n|- m_entity\l- m_began\l|+ ~Component()\l+ GetCore()\l+ GetEntity()\l+ GetTransform()\l+ GetCollider()\l+ GetResourcesHandler()\l- OnInit()\l- OnBegin()\l- OnTick()\l- OnDisplay()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node1 [label="{Disc_Engine::AABBCollision\n|- m_colX\l- m_colY\l- m_colZ\l- m_colliding\l|+ Collide()\l+ IsColliding()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_a_a_b_b_collision.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{Disc_Engine::Camera\n|- m_projectionMatrix\l- m_viewMatrix\l- m_radius\l- m_near\l- m_far\l- m_cameraSpeed\l- m_cameraFront\l- m_cameraRight\l- m_cameraUp\l- m_input\l- m_window\l- m_transform\l|+ OnInit()\l+ OnTick()\l+ GetProjection()\l+ GetView()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_camera.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node3 [label="{Disc_Engine::MeshRenderer\n|- m_angle\l- m_shader\l- m_currentMesh\l- m_currentTexture\l|+ OnInit()\l+ SetMesh()\l+ GetMesh()\l+ SetMaterial()\l+ GetMaterial()\l- OnTick()\l- OnDisplay()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_mesh_renderer.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node4 [label="{Disc_Engine::Transform\n|- m_position\l- m_rotation\l- m_scale\l|+ OnInit()\l+ Translate()\l+ Rotate()\l+ Scale()\l+ SetPosition()\l+ SetRotation()\l+ SetScale()\l+ GetPosition()\l+ GetRotation()\l+ GetScale()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_transform.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node5 [label="{World\n|- m_player\l- m_fruit\l- m_transform\l- m_collider\l- m_debugCube\l- m_defaultTexture\l|+ OnInit()\l+ OnTick()\l+ GetModel()\l+ GetTexture()\l+ GetPlayerPosition()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_world.html"];
+}

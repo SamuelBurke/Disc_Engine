@@ -17,7 +17,6 @@ public:
 private:
 	glm::vec3 m_fruitPos;
 
-
 	std::shared_ptr<Disc_Engine::Transform> m_transform;
 };
 

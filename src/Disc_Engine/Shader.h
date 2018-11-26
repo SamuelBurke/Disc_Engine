@@ -23,7 +23,7 @@ struct Sampler
 	std::shared_ptr<Texture> texture;
 };
 
-class Shader : public Resource
+class Shader : public Resource // Inherits from resource, to be used with resourceshandler.
 {
 public:
 	Shader(std::string _vertex, std::string _fragment);

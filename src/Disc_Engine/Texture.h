@@ -9,7 +9,7 @@
 namespace Disc_Engine
 {
 
-class Texture : public Resource
+class Texture : public Resource // Inherits from resource, to be used with resourceshandler.
 {
 public:
 	Texture(std::string _filePath);

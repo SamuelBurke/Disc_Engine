@@ -1,0 +1,6 @@
+digraph "Disc_Engine::Window"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Disc_Engine::Window\n|- m_window\l- m_width\l- m_height\l|+ InitWin()\l+ ClearBuff()\l+ SwapWin()\l+ GetWindow()\l+ GetWidth()\l+ GetHeight()\l- InitGL()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

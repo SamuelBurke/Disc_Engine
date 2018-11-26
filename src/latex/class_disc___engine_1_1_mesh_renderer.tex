@@ -1,0 +1,146 @@
+\hypertarget{class_disc___engine_1_1_mesh_renderer}{}\section{Disc\+\_\+\+Engine\+:\+:Mesh\+Renderer Class Reference}
+\label{class_disc___engine_1_1_mesh_renderer}\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+
+
+{\ttfamily \#include $<$Mesh\+Renderer.\+h$>$}
+
+
+
+Inheritance diagram for Disc\+\_\+\+Engine\+:\+:Mesh\+Renderer\+:
+% FIG 0
+
+
+Collaboration diagram for Disc\+\_\+\+Engine\+:\+:Mesh\+Renderer\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_ac16873520f636cdf1f0afdc0c25ab6ae}{On\+Init}} ()
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_ab40ea6de71fb6f9ef7e40348ea13de5b}{Set\+Mesh}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}} $>$ \+\_\+mesh)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_aaaee7c1ea7305219fd442e11006f9440}{Get\+Mesh}} ()
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_ab6080999b90175c224b4590fabba3da2}{Set\+Material}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}} $>$ \+\_\+texture)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_a7600b0f777f1d63cb3e0302ba637878e}{Get\+Material}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_aa5290108f670218f471ba7553b912c06}{On\+Tick}} (float \+\_\+delta\+Time)
+\item 
+void \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_a9c3bbe43b1a26d9cbc2e3b3a93c2e7cc}{On\+Display}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_af1f330f20f826d459bd9d72e93b3735d}{m\+\_\+angle}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_aa15e7dc7474e93fc105bc266340a08ce}{m\+\_\+shader}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_a961bcd1502e80ef0f5cc6e13ed48a3ca}{m\+\_\+current\+Mesh}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{class_disc___engine_1_1_mesh_renderer_a1c8ae32d9654605b506c3a5722cd517b}{m\+\_\+current\+Texture}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_a7600b0f777f1d63cb3e0302ba637878e}\label{class_disc___engine_1_1_mesh_renderer_a7600b0f777f1d63cb3e0302ba637878e}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!Get\+Material@{Get\+Material}}
+\index{Get\+Material@{Get\+Material}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{Get\+Material()}{GetMaterial()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}} $>$ Mesh\+Renderer\+::\+Get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_aaaee7c1ea7305219fd442e11006f9440}\label{class_disc___engine_1_1_mesh_renderer_aaaee7c1ea7305219fd442e11006f9440}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!Get\+Mesh@{Get\+Mesh}}
+\index{Get\+Mesh@{Get\+Mesh}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{Get\+Mesh()}{GetMesh()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}} $>$ Mesh\+Renderer\+::\+Get\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_a9c3bbe43b1a26d9cbc2e3b3a93c2e7cc}\label{class_disc___engine_1_1_mesh_renderer_a9c3bbe43b1a26d9cbc2e3b3a93c2e7cc}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!On\+Display@{On\+Display}}
+\index{On\+Display@{On\+Display}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{On\+Display()}{OnDisplay()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::\+On\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_disc___engine_1_1_component_a2ecaa15a2576e4686b25a31cea0fe342}{Disc\+\_\+\+Engine\+::\+Component}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_ac16873520f636cdf1f0afdc0c25ab6ae}\label{class_disc___engine_1_1_mesh_renderer_ac16873520f636cdf1f0afdc0c25ab6ae}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!On\+Init@{On\+Init}}
+\index{On\+Init@{On\+Init}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{On\+Init()}{OnInit()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::\+On\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_disc___engine_1_1_component_a3e79ad90d53b156d2c1d784c6051b2c5}{Disc\+\_\+\+Engine\+::\+Component}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_aa5290108f670218f471ba7553b912c06}\label{class_disc___engine_1_1_mesh_renderer_aa5290108f670218f471ba7553b912c06}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!On\+Tick@{On\+Tick}}
+\index{On\+Tick@{On\+Tick}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{On\+Tick()}{OnTick()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::\+On\+Tick (\begin{DoxyParamCaption}\item[{float}]{\+\_\+delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_disc___engine_1_1_component_a7e322d37c3f5fa0181f2321d08b14527}{Disc\+\_\+\+Engine\+::\+Component}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_ab6080999b90175c224b4590fabba3da2}\label{class_disc___engine_1_1_mesh_renderer_ab6080999b90175c224b4590fabba3da2}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!Set\+Material@{Set\+Material}}
+\index{Set\+Material@{Set\+Material}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Material()}{SetMaterial()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::\+Set\+Material (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}} $>$}]{\+\_\+texture }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_ab40ea6de71fb6f9ef7e40348ea13de5b}\label{class_disc___engine_1_1_mesh_renderer_ab40ea6de71fb6f9ef7e40348ea13de5b}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!Set\+Mesh@{Set\+Mesh}}
+\index{Set\+Mesh@{Set\+Mesh}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Mesh()}{SetMesh()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::\+Set\+Mesh (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}} $>$}]{\+\_\+mesh }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_af1f330f20f826d459bd9d72e93b3735d}\label{class_disc___engine_1_1_mesh_renderer_af1f330f20f826d459bd9d72e93b3735d}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!m\+\_\+angle@{m\+\_\+angle}}
+\index{m\+\_\+angle@{m\+\_\+angle}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{m\+\_\+angle}{m\_angle}}
+{\footnotesize\ttfamily float Disc\+\_\+\+Engine\+::\+Mesh\+Renderer\+::m\+\_\+angle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_a961bcd1502e80ef0f5cc6e13ed48a3ca}\label{class_disc___engine_1_1_mesh_renderer_a961bcd1502e80ef0f5cc6e13ed48a3ca}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!m\+\_\+current\+Mesh@{m\+\_\+current\+Mesh}}
+\index{m\+\_\+current\+Mesh@{m\+\_\+current\+Mesh}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{m\+\_\+current\+Mesh}{m\_currentMesh}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Vertex\+Array}}$>$ Disc\+\_\+\+Engine\+::\+Mesh\+Renderer\+::m\+\_\+current\+Mesh\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_a1c8ae32d9654605b506c3a5722cd517b}\label{class_disc___engine_1_1_mesh_renderer_a1c8ae32d9654605b506c3a5722cd517b}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!m\+\_\+current\+Texture@{m\+\_\+current\+Texture}}
+\index{m\+\_\+current\+Texture@{m\+\_\+current\+Texture}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{m\+\_\+current\+Texture}{m\_currentTexture}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_texture}{Texture}}$>$ Disc\+\_\+\+Engine\+::\+Mesh\+Renderer\+::m\+\_\+current\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_disc___engine_1_1_mesh_renderer_aa15e7dc7474e93fc105bc266340a08ce}\label{class_disc___engine_1_1_mesh_renderer_aa15e7dc7474e93fc105bc266340a08ce}} 
+\index{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}!m\+\_\+shader@{m\+\_\+shader}}
+\index{m\+\_\+shader@{m\+\_\+shader}!Disc\+\_\+\+Engine\+::\+Mesh\+Renderer@{Disc\+\_\+\+Engine\+::\+Mesh\+Renderer}}
+\subsubsection{\texorpdfstring{m\+\_\+shader}{m\_shader}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_shader}{Shader}}$>$ Disc\+\_\+\+Engine\+::\+Mesh\+Renderer\+::m\+\_\+shader\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Disc\+\_\+\+Engine/\mbox{\hyperlink{_mesh_renderer_8h}{Mesh\+Renderer.\+h}}\item 
+Disc\+\_\+\+Engine/\mbox{\hyperlink{_mesh_renderer_8cpp}{Mesh\+Renderer.\+cpp}}\end{DoxyCompactItemize}

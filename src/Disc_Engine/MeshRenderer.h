@@ -11,15 +11,15 @@ class Shader;
 class VertexArray;
 class Texture;
 
-class MeshRenderer : public Component
+class MeshRenderer : public Component // Inherits from Component, attached to anything that needs to be displayed (Player, Fruit).
 {
 public:
 	void OnInit();
 
-	void SetMesh(std::weak_ptr<VertexArray> _mesh);
+	void SetMesh(std::weak_ptr<VertexArray> _mesh); // Sets the current mesh.
 	std::shared_ptr<VertexArray> GetMesh();
 
-	void SetMaterial(std::weak_ptr<Texture> _texture);
+	void SetMaterial(std::weak_ptr<Texture> _texture); // Sets the current texture.
 	std::shared_ptr<Texture> GetMaterial();
 
 private:

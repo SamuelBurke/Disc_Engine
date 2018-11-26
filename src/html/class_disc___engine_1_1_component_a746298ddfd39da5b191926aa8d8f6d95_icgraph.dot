@@ -1,0 +1,22 @@
+digraph "Disc_Engine::Component::GetEntity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13 [label="Disc_Engine::Component\l::GetEntity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Disc_Engine::Component\l::GetCore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html#a601ec93559ca1dd75c2c1ea13510594d"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Disc_Engine::MeshRenderer\l::OnInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_mesh_renderer.html#ac16873520f636cdf1f0afdc0c25ab6ae"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Disc_Engine::MeshRenderer\l::OnTick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_mesh_renderer.html#aa5290108f670218f471ba7553b912c06"];
+  Node14 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Disc_Engine::MeshRenderer\l::OnDisplay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_mesh_renderer.html#a9c3bbe43b1a26d9cbc2e3b3a93c2e7cc"];
+  Node13 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Disc_Engine::Component\l::GetTransform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html#a4a2388231ae4116b35ee75793868fda6"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="World::OnInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_world.html#a44b69f8225145de782c9ace28fed6819"];
+  Node13 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="Disc_Engine::Component\l::GetCollider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html#ae902b61db2d9d70bdcf2fa45edbac131"];
+  Node20 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

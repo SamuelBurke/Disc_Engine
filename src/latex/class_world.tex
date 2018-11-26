@@ -1,0 +1,137 @@
+\hypertarget{class_world}{}\section{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+
+
+Inheritance diagram for World\+:
+% FIG 0
+
+
+Collaboration diagram for World\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_world_a44b69f8225145de782c9ace28fed6819}{On\+Init}} ()
+\item 
+void \mbox{\hyperlink{class_world_a0bbbfa3065f37588fa83f7d5533bcd5b}{On\+Tick}} (float \+\_\+delta\+Time)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Disc\+\_\+\+Engine\+::\+Vertex\+Array}} $>$ \mbox{\hyperlink{class_world_ae19fd1fd5943772a8e0e95cc8a90fef8}{Get\+Model}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Disc\+\_\+\+Engine\+::\+Texture}} $>$ \mbox{\hyperlink{class_world_a0bf00237a38156d4c05d51211302328e}{Get\+Texture}} ()
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_world_aa126fb6fe32add15eb789d7920659bb3}{Get\+Player\+Position}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_world_ae983a13c169f3dbd4cbe0cbb0e0f6739}{m\+\_\+player}}
+\item 
+\mbox{\hyperlink{class_fruit}{Fruit}} \mbox{\hyperlink{class_world_a3558a6a064be3565ee8835a34da58d4d}{m\+\_\+fruit}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_transform}{Disc\+\_\+\+Engine\+::\+Transform}} $>$ \mbox{\hyperlink{class_world_a13c7bbabeb92dae015b76b582bac8084}{m\+\_\+transform}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_a_a_b_b_collision}{Disc\+\_\+\+Engine\+::\+A\+A\+B\+B\+Collision}} $>$ \mbox{\hyperlink{class_world_abb8264e9716aeb6867745f5defdb5e55}{m\+\_\+collider}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Disc\+\_\+\+Engine\+::\+Vertex\+Array}} $>$ \mbox{\hyperlink{class_world_a59bc35e219814aa69f7535ffff5f56c3}{m\+\_\+debug\+Cube}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Disc\+\_\+\+Engine\+::\+Texture}} $>$ \mbox{\hyperlink{class_world_ae7e5b1953918b63b9fbb2c7a2c5d82d6}{m\+\_\+default\+Texture}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_world_ae19fd1fd5943772a8e0e95cc8a90fef8}\label{class_world_ae19fd1fd5943772a8e0e95cc8a90fef8}} 
+\index{World@{World}!Get\+Model@{Get\+Model}}
+\index{Get\+Model@{Get\+Model}!World@{World}}
+\subsubsection{\texorpdfstring{Get\+Model()}{GetModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Disc\+\_\+\+Engine\+::\+Vertex\+Array}} $>$ World\+::\+Get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_world_aa126fb6fe32add15eb789d7920659bb3}\label{class_world_aa126fb6fe32add15eb789d7920659bb3}} 
+\index{World@{World}!Get\+Player\+Position@{Get\+Player\+Position}}
+\index{Get\+Player\+Position@{Get\+Player\+Position}!World@{World}}
+\subsubsection{\texorpdfstring{Get\+Player\+Position()}{GetPlayerPosition()}}
+{\footnotesize\ttfamily glm\+::vec3 World\+::\+Get\+Player\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_world_a0bf00237a38156d4c05d51211302328e}\label{class_world_a0bf00237a38156d4c05d51211302328e}} 
+\index{World@{World}!Get\+Texture@{Get\+Texture}}
+\index{Get\+Texture@{Get\+Texture}!World@{World}}
+\subsubsection{\texorpdfstring{Get\+Texture()}{GetTexture()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_disc___engine_1_1_texture}{Disc\+\_\+\+Engine\+::\+Texture}} $>$ World\+::\+Get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_world_a44b69f8225145de782c9ace28fed6819}\label{class_world_a44b69f8225145de782c9ace28fed6819}} 
+\index{World@{World}!On\+Init@{On\+Init}}
+\index{On\+Init@{On\+Init}!World@{World}}
+\subsubsection{\texorpdfstring{On\+Init()}{OnInit()}}
+{\footnotesize\ttfamily void World\+::\+On\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_disc___engine_1_1_component_a3e79ad90d53b156d2c1d784c6051b2c5}{Disc\+\_\+\+Engine\+::\+Component}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_world_a0bbbfa3065f37588fa83f7d5533bcd5b}\label{class_world_a0bbbfa3065f37588fa83f7d5533bcd5b}} 
+\index{World@{World}!On\+Tick@{On\+Tick}}
+\index{On\+Tick@{On\+Tick}!World@{World}}
+\subsubsection{\texorpdfstring{On\+Tick()}{OnTick()}}
+{\footnotesize\ttfamily void World\+::\+On\+Tick (\begin{DoxyParamCaption}\item[{float}]{\+\_\+delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_disc___engine_1_1_component_a7e322d37c3f5fa0181f2321d08b14527}{Disc\+\_\+\+Engine\+::\+Component}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_world_abb8264e9716aeb6867745f5defdb5e55}\label{class_world_abb8264e9716aeb6867745f5defdb5e55}} 
+\index{World@{World}!m\+\_\+collider@{m\+\_\+collider}}
+\index{m\+\_\+collider@{m\+\_\+collider}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+collider}{m\_collider}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_a_a_b_b_collision}{Disc\+\_\+\+Engine\+::\+A\+A\+B\+B\+Collision}}$>$ World\+::m\+\_\+collider\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a59bc35e219814aa69f7535ffff5f56c3}\label{class_world_a59bc35e219814aa69f7535ffff5f56c3}} 
+\index{World@{World}!m\+\_\+debug\+Cube@{m\+\_\+debug\+Cube}}
+\index{m\+\_\+debug\+Cube@{m\+\_\+debug\+Cube}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+debug\+Cube}{m\_debugCube}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_vertex_array}{Disc\+\_\+\+Engine\+::\+Vertex\+Array}}$>$ World\+::m\+\_\+debug\+Cube\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_ae7e5b1953918b63b9fbb2c7a2c5d82d6}\label{class_world_ae7e5b1953918b63b9fbb2c7a2c5d82d6}} 
+\index{World@{World}!m\+\_\+default\+Texture@{m\+\_\+default\+Texture}}
+\index{m\+\_\+default\+Texture@{m\+\_\+default\+Texture}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+default\+Texture}{m\_defaultTexture}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_texture}{Disc\+\_\+\+Engine\+::\+Texture}}$>$ World\+::m\+\_\+default\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a3558a6a064be3565ee8835a34da58d4d}\label{class_world_a3558a6a064be3565ee8835a34da58d4d}} 
+\index{World@{World}!m\+\_\+fruit@{m\+\_\+fruit}}
+\index{m\+\_\+fruit@{m\+\_\+fruit}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+fruit}{m\_fruit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fruit}{Fruit}} World\+::m\+\_\+fruit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_ae983a13c169f3dbd4cbe0cbb0e0f6739}\label{class_world_ae983a13c169f3dbd4cbe0cbb0e0f6739}} 
+\index{World@{World}!m\+\_\+player@{m\+\_\+player}}
+\index{m\+\_\+player@{m\+\_\+player}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+player}{m\_player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} World\+::m\+\_\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a13c7bbabeb92dae015b76b582bac8084}\label{class_world_a13c7bbabeb92dae015b76b582bac8084}} 
+\index{World@{World}!m\+\_\+transform@{m\+\_\+transform}}
+\index{m\+\_\+transform@{m\+\_\+transform}!World@{World}}
+\subsubsection{\texorpdfstring{m\+\_\+transform}{m\_transform}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_disc___engine_1_1_transform}{Disc\+\_\+\+Engine\+::\+Transform}}$>$ World\+::m\+\_\+transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Goldwell/\mbox{\hyperlink{_world_8h}{World.\+h}}\item 
+Goldwell/\mbox{\hyperlink{_world_8cpp}{World.\+cpp}}\end{DoxyCompactItemize}

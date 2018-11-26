@@ -1,0 +1,6 @@
+digraph "Disc_Engine::Entity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Disc_Engine::Entity\n|- m_components\l- m_self\l- m_core\l|+ GetComponent()\l+ AddComponent()\l+ AddComponent()\l+ AddComponent()\l+ GetCore()\l- Tick()\l- Display()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

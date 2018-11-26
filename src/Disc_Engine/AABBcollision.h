@@ -8,15 +8,15 @@
 namespace Disc_Engine
 {
 	
-class AABBCollision : public Component
+class AABBCollision : public Component // AABBCollision, inherits from component to be added to the player and fruit.
 {
 public:
 	void Collide();
-	bool IsColliding(glm::vec3 _a, glm::vec3 _b);
+	bool IsColliding(glm::vec3 _a, glm::vec3 _b); // Called to check if a and b collide with each other.
 
 private:
 
-	bool m_colX;
+	bool m_colX; // boolean variables for each coordinate to check collision.
 	bool m_colY;
 	bool m_colZ;
 

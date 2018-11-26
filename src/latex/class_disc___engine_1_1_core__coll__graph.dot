@@ -1,0 +1,21 @@
+digraph "Disc_Engine::Core"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Disc_Engine::Core\n|- m_quit\l- m_entities\l- m_self\l- m_device\l- m_context\l|+ Begin()\l+ End()\l+ AddEntity()\l+ GetComponent()\l+ Init()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_window" ,arrowhead="odiamond"];
+  Node2 [label="{Disc_Engine::Window\n|- m_window\l- m_width\l- m_height\l|+ InitWin()\l+ ClearBuff()\l+ SwapWin()\l+ GetWindow()\l+ GetWidth()\l+ GetHeight()\l- InitGL()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_window.html"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_environment" ,arrowhead="odiamond"];
+  Node3 [label="{Disc_Engine::Environment\n|- m_deltaTime\l- m_lastTime\l|+ Init()\l+ CalculateDeltaTime()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_environment.html"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_input" ,arrowhead="odiamond"];
+  Node4 [label="{Disc_Engine::Input\n|- m_currentKey\l|+ Init()\l+ Update()\l+ isKeyPressed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_input.html"];
+  Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_world" ,arrowhead="odiamond"];
+  Node5 [label="{World\n|- m_transform\l- m_collider\l- m_debugCube\l- m_defaultTexture\l|+ OnInit()\l+ OnTick()\l+ GetModel()\l+ GetTexture()\l+ GetPlayerPosition()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_world.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node6 [label="{Disc_Engine::Component\n|- m_entity\l- m_began\l|+ ~Component()\l+ GetCore()\l+ GetEntity()\l+ GetTransform()\l+ GetCollider()\l+ GetResourcesHandler()\l- OnInit()\l- OnBegin()\l- OnTick()\l- OnDisplay()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_component.html"];
+  Node7 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -m_player" ,arrowhead="odiamond"];
+  Node7 [label="{Player\n|- m_speed\l- m_direction\l- m_playerPos\l- m_playerParts\l- m_transform\l|+ Init()\l+ Update()\l+ AddSnakePart()\l+ GetPlayerPosition()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player.html"];
+  Node4 -> Node7 [color="grey25",fontsize="10",style="solid",label=" -m_input" ,arrowhead="odiamond"];
+  Node8 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -m_fruit" ,arrowhead="odiamond"];
+  Node8 [label="{Fruit\n|- m_fruitPos\l- m_transform\l|+ Init()\l+ GetFruitPosition()\l+ Update()\l+ OnSpawn()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fruit.html"];
+}

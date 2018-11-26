@@ -1,0 +1,15 @@
+digraph "Disc_Engine::Camera::OnTick"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="Disc_Engine::Camera\l::OnTick",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Disc_Engine::Input\l::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_input.html#af80dcfde6dbfe39bf3bc0345c75595ce"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Disc_Engine::Input\l::isKeyPressed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_input.html#ad3455de83698aa34630444c4b0e5d404"];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Disc_Engine::Transform\l::GetPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_transform.html#ab56d0806d3d2d67a0587c7ffebf0b2d0"];
+  Node10 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Disc_Engine::Transform\l::GetRotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_disc___engine_1_1_transform.html#a5af4d340711239a3517813e9122c6065"];
+}

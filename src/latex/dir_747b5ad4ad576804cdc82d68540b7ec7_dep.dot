@@ -1,0 +1,9 @@
+digraph "Disc_Engine" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_747b5ad4ad576804cdc82d68540b7ec7 [shape=box, label="Disc_Engine", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_747b5ad4ad576804cdc82d68540b7ec7.html"];
+  dir_b4ca96628f9e835a7af59ef6b28a4e85 [shape=box label="Goldwell" URL="dir_b4ca96628f9e835a7af59ef6b28a4e85.html"];
+  dir_b4ca96628f9e835a7af59ef6b28a4e85->dir_747b5ad4ad576804cdc82d68540b7ec7 [headlabel="16", labeldistance=1.5 headhref="dir_000001_000000.html"];
+  dir_747b5ad4ad576804cdc82d68540b7ec7->dir_b4ca96628f9e835a7af59ef6b28a4e85 [headlabel="2", labeldistance=1.5 headhref="dir_000000_000001.html"];
+}

@@ -14,7 +14,7 @@ namespace Disc_Engine
 {
 class VertexBuffer;
 
-class VertexArray : public Resource
+class VertexArray : public Resource // Inherits from resource, to be used with resourceshandler.
 {
 public:
 	VertexArray();
